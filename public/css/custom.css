@@ -1,0 +1,29 @@
+/* your styles go here */
+.active-icon {
+    filter: invert(68%) sepia(71%) saturate(402%) hue-rotate(359deg) brightness(82%) contrast(91%); 
+}
+
+.un-icon {
+    filter: invert(85%) sepia(10%) saturate(235%) hue-rotate(169deg) brightness(85%) contrast(87%);
+}
+
+.sidebar-link:hover .un-icon {
+  filter: invert(68%) sepia(71%) saturate(402%) hue-rotate(359deg) brightness(82%) contrast(91%);
+}
+
+.dots {
+  height: 7px;
+  width: 7px;
+  margin-left: 0px;
+  margin-right: 6px;
+  margin-bottom: -2px !important;
+  background-color: rgb(255,255,255);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media (max-width: 300px) {
+  .pro {
+    margin-top: 40px;
+  }
+}
