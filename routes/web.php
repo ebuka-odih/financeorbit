@@ -13,16 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'pages.index')->name('index');
-Route::view('/stocks', 'pages.stocks')->name('stocks');
-Route::view('/forex', 'pages.forex')->name('forex');
-Route::view('/mining', 'pages.mining')->name('mining');
-Route::view('/about', 'pages.about')->name('about');
-Route::view('/contact', 'pages.contact')->name('contact');
-Route::view('/terms', 'pages.terms')->name('terms');
-Route::view('/faq', 'pages.faq')->name('faq');
-Route::view('/privacy', 'pages.privacy')->name('privacy');
-Route::view('/copy-trader', 'pages.copy-trader')->name('copy-trader');
+Route::view('/', 'welcome')->name('index');
+//Route::view('/stocks', 'pages.stocks')->name('stocks');
+//Route::view('/forex', 'pages.forex')->name('forex');
+//Route::view('/mining', 'pages.mining')->name('mining');
+//Route::view('/about', 'pages.about')->name('about');
+//Route::view('/contact', 'pages.contact')->name('contact');
+//Route::view('/terms', 'pages.terms')->name('terms');
+//Route::view('/faq', 'pages.faq')->name('faq');
+//Route::view('/privacy', 'pages.privacy')->name('privacy');
+//Route::view('/copy-trader', 'pages.copy-trader')->name('copy-trader');
 
 Auth::routes(['verify' => true]);
 
