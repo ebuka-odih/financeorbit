@@ -147,7 +147,6 @@
                         </a>
                     </li>
 
-
                     <li class="nav-main-heading">Investment / Trading</li>
                     <li class="nav-main-item">
                         <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
@@ -175,11 +174,11 @@
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
-                                    <span class="nav-main-link-name">All Subscription</span>
+                                    <span class="nav-main-link-name">Invested Subscription</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.subscription.create') }}">
+                                <a class="nav-main-link" href="{{ route('admin.subscription.index') }}">
                                     <span class="nav-main-link-name">Add Subscription</span>
                                 </a>
                             </li>
