@@ -185,22 +185,94 @@
                         </ul>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link "  href="{{ route('admin.copy-traders.index') }}">
-                            <i class="nav-main-link-icon fa fa-chart-area"></i>
-                            <span class="nav-main-link-name">Copy Traders</span>
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                            <i class="nav-main-link-icon fa fa-copy"></i>
+                            <span class="nav-main-link-name">Copy Trade</span>
                         </a>
+                        <ul class="nav-main-submenu">
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                    <span class="nav-main-link-name">Copied Trades</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                    <span class="nav-main-link-name">Add Copy Traders</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link "  href="{{ route('admin.signal.index') }}">
-                            <i class="nav-main-link-icon fa fa-chart-bar"></i>
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                            <i class="nav-main-link-icon fa fa-traffic-light"></i>
                             <span class="nav-main-link-name">Trading Signals</span>
                         </a>
+                        <ul class="nav-main-submenu">
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                    <span class="nav-main-link-name">Traded Signals</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                    <span class="nav-main-link-name">Add Signals</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link "  href="{{ route('admin.signal.index') }}">
-                            <i class="nav-main-link-icon fa fa-chart-bar"></i>
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                            <i class="nav-main-link-icon fa fa-rocket"></i>
                             <span class="nav-main-link-name">Staking</span>
                         </a>
+                        <ul class="nav-main-submenu">
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                    <span class="nav-main-link-name">Staked Plans</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                    <span class="nav-main-link-name">Add Staking Plan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                            <i class="nav-main-link-icon fa fa-tools"></i>
+                            <span class="nav-main-link-name">Mining</span>
+                        </a>
+                        <ul class="nav-main-submenu">
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                    <span class="nav-main-link-name">Mined Plans</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                    <span class="nav-main-link-name">Add Mining Plan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                            <i class="nav-main-link-icon fa fa-chart-pie"></i>
+                            <span class="nav-main-link-name">Stocks</span>
+                        </a>
+                        <ul class="nav-main-submenu">
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                    <span class="nav-main-link-name">Purchased Stocks</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                    <span class="nav-main-link-name">Add Stocks</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="nav-main-heading">Others</li>

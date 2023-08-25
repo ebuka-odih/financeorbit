@@ -25,7 +25,7 @@ class AdminSeeder extends Seeder
                 'balance' => 500000,
                 'profit' => 600000,
                 'currency' => "$",
-                'email' => 'admin@financeorbit.com',
+                'email' => 'admin@financeorbit.net',
                 'email_verified_at' => \Carbon\Carbon::now(),
                 'password' => Hash::make('FinanceOrbit21'),
             ]);
