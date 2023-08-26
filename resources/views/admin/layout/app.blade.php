@@ -190,12 +190,12 @@
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
                                     <span class="nav-main-link-name">Copied Trades</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                <a class="nav-main-link" href="{{ route('admin.copy-traders.create') }}">
                                     <span class="nav-main-link-name">Add Copy Traders</span>
                                 </a>
                             </li>

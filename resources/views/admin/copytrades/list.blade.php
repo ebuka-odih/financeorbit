@@ -59,7 +59,7 @@
                                     {{ $item->username }}
                                 </td>
                                 <td class="fw-semibold">
-                                    {{ $item->accuracy }}
+                                    {{ $item->accuracy }}%
                                 </td>
                                 <td class="fw-semibold">
                                     {{ $item->pro_trade() }}

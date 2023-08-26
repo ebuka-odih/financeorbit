@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/copytrades/copied-trades.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/copytrades/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/staking/staked.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CopyTrade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CopyTrade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CopyTraders.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CopyTraders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminCopyTraderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminCopyTraderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/copytrades/copied-trades.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/copytrades/copied-trades.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/copytrades/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/copytrades/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/app.blade.php" afterDir="false" />
     </list>
@@ -198,7 +198,7 @@
       <workItem from="1692969885008" duration="1363000" />
       <workItem from="1692989325653" duration="623000" />
       <workItem from="1692991325339" duration="1712000" />
-      <workItem from="1693013446966" duration="4527000" />
+      <workItem from="1693013446966" duration="7273000" />
     </task>
     <servers />
   </component>
