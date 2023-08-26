@@ -208,12 +208,7 @@
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
-                                    <span class="nav-main-link-name">Traded Signals</span>
-                                </a>
-                            </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.copy-traders.create') }}">
+                                <a class="nav-main-link" href="{{ route('admin.signal.create') }}">
                                     <span class="nav-main-link-name">Add Signals</span>
                                 </a>
                             </li>

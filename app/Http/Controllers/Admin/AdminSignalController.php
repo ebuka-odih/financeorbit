@@ -10,12 +10,12 @@ class AdminSignalController extends Controller
 {
     public function index()
     {
-        $signals = Signal::all();
-        return view('admin.signals', compact('signals'));
+
     }
     public function create()
     {
-
+        $signals = Signal::all();
+        return view('admin.signal.create', compact('signals'));
     }
 
     public function store(Request $request)
@@ -26,6 +26,7 @@ class AdminSignalController extends Controller
             'tp' => 'required',
             'sl' => 'required',
             'ta' => 'required',
+            'lot' => 'nullable',
             'time' => 'required',
         ]);
 
@@ -35,6 +36,7 @@ class AdminSignalController extends Controller
         $data->tp = $request->tp;
         $data->sl = $request->sl;
         $data->ta = $request->ta;
+        $data->lot = $request->lot;
         $data->time = $request->time;
         $data->save();
         return redirect()->back()->with('success', 'Created Successfully');
