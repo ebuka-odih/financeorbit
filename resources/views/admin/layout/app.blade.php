@@ -213,7 +213,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                <a class="nav-main-link" href="{{ route('admin.copy-traders.create') }}">
                                     <span class="nav-main-link-name">Add Signals</span>
                                 </a>
                             </li>

@@ -15,7 +15,8 @@ class AdminCopyTraderController extends Controller
     }
     public function create()
     {
-
+        $traders = CopyTraders::all();
+        return view('admin.copytrades.list', compact('traders'));
     }
 
     public function store(Request $request)
@@ -57,11 +58,48 @@ class AdminCopyTraderController extends Controller
         return redirect()->back()->with('success', 'Created Successfully');
     }
 
+    public function edit($id)
+    {
+        $trade = CopyTraders::findOrFail($id);
+        return view('admin.copytrades.edit', compact('trade'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $trade = CopyTraders::findOrFail($id);
+        $data = $this->getData($request);
+        if ($request->hasFile('pro_image')) {
+            $image = $request->file('pro_image');
+            $input['imagename'] = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/files');
+            $image->move($destinationPath, $input['imagename']);
+
+            $trade->update(['pro_image' => $input['imagename']]);
+            $trade->update($data);
+            return redirect()->back()->with('success', 'Updated Successfully');
+        }
+        $trade->update($data);
+        return redirect()->back()->with('success', 'Updated Successfully');
+    }
     public function destroy($id)
     {
         $data = CopyTraders::findOrFail($id);
         $data->delete();
         return redirect()->back();
+    }
+
+    protected function getData(Request $request)
+    {
+        $rules = [
+            'username' => 'required',
+            'accuracy' => 'required',
+            'won_trades' => 'required',
+            'lost_trades' => 'required',
+            'total_pec' => 'required',
+            'pro_trade' => 'required',
+
+        ];
+        return $request->validate($rules);
     }
 
 }
