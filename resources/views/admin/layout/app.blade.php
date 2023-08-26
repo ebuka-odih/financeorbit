@@ -18,7 +18,6 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
 
-
     <!-- Stylesheets -->
     <!-- Fonts and Dashmix framework -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -42,7 +41,7 @@
             <div class="bg-primary-op">
                 <div class="content-header">
                     <!-- User Avatar -->
-                    <a class="img-link me-1" href="">
+                    <a class="img-link me-1" href="{{ route('index') }}">
                         <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar10.jpg" alt="">
                     </a>
                     <!-- END User Avatar -->
@@ -76,7 +75,7 @@
         <div class="bg-header-dark">
             <div class="content-header bg-white-5">
                 <!-- Logo -->
-                <a class="fw-semibold text-white tracking-wide" href="index.html">
+                <a class="fw-semibold text-white tracking-wide" href="{{ route('index') }}">
               <span class="smini-visible">
                 D<span class="opacity-75">x</span>
               </span>
@@ -227,12 +226,12 @@
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                <a class="nav-main-link" href="{{ route('admin.staking.index') }}">
                                     <span class="nav-main-link-name">Staked Plans</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                <a class="nav-main-link" href="{{ route('admin.staking.index') }}">
                                     <span class="nav-main-link-name">Add Staking Plan</span>
                                 </a>
                             </li>
@@ -270,6 +269,42 @@
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
                                     <span class="nav-main-link-name">Add Stocks</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                            <i class="nav-main-link-icon fa fa-toolbox"></i>
+                            <span class="nav-main-link-name">Scalping</span>
+                        </a>
+                        <ul class="nav-main-submenu">
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                    <span class="nav-main-link-name">Purchased Scalping</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                    <span class="nav-main-link-name">Add Scalping</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                            <i class="nav-main-link-icon fa fa-book"></i>
+                            <span class="nav-main-link-name">Amazon</span>
+                        </a>
+                        <ul class="nav-main-submenu">
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                    <span class="nav-main-link-name">Purchased Books</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                    <span class="nav-main-link-name">Add Books</span>
                                 </a>
                             </li>
                         </ul>

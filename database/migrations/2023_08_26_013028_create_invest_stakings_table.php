@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStakingsTable extends Migration
+class CreateInvestStakingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateStakingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('stakings', function (Blueprint $table) {
+        Schema::create('invest_stakings', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name');
-            $table->string('token');
-            $table->string('amount');
-            $table->integer('roi_rate')->nullable();
-            $table->decimal('roi', 11, 2);
+            $table->bigInteger('staking_id');
+            $table->bigInteger('user_id');
+            $table->integer('status')->default(0);
+            $table->decimal('amount', 11, 2);
         });
     }
 
@@ -31,6 +30,6 @@ class CreateStakingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stakings');
+        Schema::dropIfExists('invest_stakings');
     }
 }

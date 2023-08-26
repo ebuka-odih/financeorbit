@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::resource('wallet', "Admin\PaymentMethodController");
     Route::resource('copy-traders', "Admin\AdminCopyTraderController");
     Route::resource('signal', "Admin\AdminSignalController");
+    Route::resource('staking', "Admin\AdminStakingController");
 
     //Trades Routes
     Route::get('open/trades/history', "Admin\AdminTradesController@openTrades")->name('trades.open');

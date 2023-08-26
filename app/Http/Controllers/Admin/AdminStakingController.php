@@ -10,8 +10,8 @@ class AdminStakingController extends Controller
 {
     public function index()
     {
-        $plans = Staking::all();
-        return view('admin.staking.list', compact('plans'));
+        $staking = Staking::all();
+        return view('admin.staking.list', compact('staking'));
     }
 
     public function create()
@@ -23,13 +23,17 @@ class AdminStakingController extends Controller
     {
         $request->validate([
            'name' => 'required',
-           'price' => 'required',
-           'return' => 'required',
+           'amount' => 'required',
+           'token' => 'nullable',
+           'roi' => 'required',
+           'roi_rate' => 'nullable',
         ]);
         $staking = new Staking();
         $staking->name = $request->name;
-        $staking->price = $request->price;
-        $staking->return = $request->return;
+        $staking->amount = $request->amount;
+        $staking->token = $request->token;
+        $staking->roi = $request->roi;
+        $staking->roi_rate = $request->roi_rate;
         $staking->save();
         return redirect()->back()->with('success', 'Created Successfully');
     }
