@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/resources/views/pages/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/layout/app2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/layout/app2.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +194,7 @@
       <workItem from="1692989325653" duration="623000" />
       <workItem from="1692991325339" duration="1712000" />
       <workItem from="1693013446966" duration="13879000" />
-      <workItem from="1693082341971" duration="2182000" />
+      <workItem from="1693082341971" duration="2824000" />
     </task>
     <servers />
   </component>

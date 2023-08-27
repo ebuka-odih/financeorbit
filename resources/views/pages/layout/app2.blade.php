@@ -177,7 +177,7 @@
         <div class="uk-container">
             <div class="uk-grid-medium" data-uk-grid>
                 <div class="uk-width-expand@m">
-                    <h3 style="color: blue; font-weight: bolder">Algo-AI</h3>
+                    <h3 style="color: blue; font-weight: bolder">{{ env('APP_NAME') }}</h3>
                     {{--                    <img class="uk-margin-small-right" src="img/logo.png" alt="wave" width="130" height="50">--}}
                     <p class="uk-text-large uk-margin-small-top">Trade with financial thinking.</p>
                     <p>Becks Square (Headquarters)<br>
@@ -292,7 +292,6 @@
 <script src="{{ asset('js/vendors/blockit.min.js') }}"></script>
 <script src="{{ asset('js/config-theme.js') }}"></script>
 
-<script src="//code.jivosite.com/widget/f3pnGqtMGz" async></script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 

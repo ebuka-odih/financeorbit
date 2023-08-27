@@ -265,7 +265,7 @@
                     </ul>
                 </div>
                 <div class="uk-width-expand@m uk-text-right@m">
-                    <p>Algo-AI Limited. © 2023</p>
+                    <p>Algo-AI Limited. © {{ Date('Y') }}</p>
                 </div>
             </div>
         </div>
@@ -282,8 +282,6 @@
 <script src="{{ asset('js/vendors/uikit.min.js') }}"></script>
 <script src="{{ asset('js/vendors/blockit.min.js') }}"></script>
 <script src="{{ asset('js/config-theme.js') }}"></script>
-<script src="//code.jivosite.com/widget/f3pnGqtMGz" async></script>
-
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
