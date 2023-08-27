@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx" dir="ltr">
 
-<!-- Mirrored from Yieldmarketstocker.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jun 2022 09:24:42 GMT -->
 <head>
     <!-- Standard Meta -->
     <meta charset="utf-8">
@@ -170,7 +169,7 @@
         <div class="uk-container">
             <div class="uk-grid-medium" data-uk-grid>
                 <div class="uk-width-expand@m">
-                    <h3 style="color: blue; font-weight: bolder">Algo-AI</h3>
+                    <h3 style="color: blue; font-weight: bolder">{{ env('APP_NAME') }}</h3>
                     {{--                    <img class="uk-margin-small-right" src="img/logo.png" alt="wave" width="130" height="50">--}}
                     <p class="uk-text-large uk-margin-small-top">Trade with financial thinking.</p>
                     <p>Becks Square (Headquarters)<br>
