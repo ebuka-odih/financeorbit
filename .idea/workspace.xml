@@ -2,11 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/signal/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/signal/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/stock/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/stock/invested.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminSignalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminSignalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminStakingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminStakingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/review.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/stylehome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/vendors/uikit.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/config-theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/config-theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/front.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/security.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/vendors/indonez.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/vendors/uikit.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/vendors/uikit.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/signal/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/signal/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/staking/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/staking/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/staking/staked.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/staking/staked.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/copy-trader.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/faq.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/forex.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/mining.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/privacy.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/stocks.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/terms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/terms.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +222,8 @@
       <workItem from="1692969885008" duration="1363000" />
       <workItem from="1692989325653" duration="623000" />
       <workItem from="1692991325339" duration="1712000" />
-      <workItem from="1693013446966" duration="9113000" />
+      <workItem from="1693013446966" duration="13879000" />
+      <workItem from="1693082341971" duration="1806000" />
     </task>
     <servers />
   </component>

@@ -226,7 +226,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.staking.index') }}">
+                                <a class="nav-main-link" href="{{ route('admin.staking.create') }}">
                                     <span class="nav-main-link-name">Add Staking Plan</span>
                                 </a>
                             </li>

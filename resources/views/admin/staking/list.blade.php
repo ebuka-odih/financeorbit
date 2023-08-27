@@ -15,20 +15,6 @@
 
         <!-- Page Content -->
         <div class="content">
-            <!-- Elements -->
-            <div class="block block-rounded">
-
-
-
-                <!-- END Basic Elements -->
-
-
-            </div>
-        </div>
-        <!-- END Elements -->
-
-        <!-- Page Content -->
-        <div class="content">
 
             <!-- Striped Table -->
             <div class="block block-rounded">
@@ -59,20 +45,20 @@
                                     $@money($item->amount)
                                 </td>
                                 <td class="fw-semibold">
-                                    {{ $item->roi }} ({{ $item->roi_rate }})%
+                                    {{ $item->roi }} ({{ $item->roi_rate }}%)
                                 </td>
                                 <td class="text-center">
                                     <div class="btn-group">
-                                        <a href="{{ route('admin.subscription.edit', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit">
+                                        <a href="{{ route('admin.staking.edit', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
 
-                                        <form method="POST" action="{!! route('admin.subscription.destroy', $item->id) !!}" accept-charset="UTF-8">
+                                        <form method="POST" action="{!! route('admin.staking.destroy', $item->id) !!}" accept-charset="UTF-8">
                                             <input name="_method" value="DELETE" type="hidden">
                                             {{ csrf_field() }}
 
                                             <div class="btn-group btn-group-xs pull-right" role="group">
-                                                <button type="submit" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" onclick="return confirm(&quot;Delete subscription?&quot;)">
+                                                <button type="submit" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" onclick="return confirm(&quot;Delete Item?&quot;)">
                                                     <i class="fa fa-times"></i>
                                                 </button>
 
@@ -110,7 +96,7 @@
                         </div>
                     </div>
                     <div class="block-content">
-                        <form action="{{ route('admin.subscription.store') }}" method="POST" enctype="multipart/form-data" >
+                        <form action="{{ route('admin.staking.store') }}" method="POST" enctype="multipart/form-data" >
                             @csrf
                             @if ($errors->any())
                                 <div class="alert alert-danger">
@@ -126,26 +112,26 @@
                                 <div class="col-lg-12">
                                     <div class="mb-4 col-lg-12">
                                         <label class="form-label" for="example-email-input">Name</label>
-                                        <input type="text" class="form-control" id="example-email-input" name="name" >
+                                        <input type="text" class="form-control" id="example-email-input" name="name" required>
                                     </div>
                                     <div class="row">
                                         <div class="mb-4 col-lg-6">
                                             <label class="form-label" for="example-text-input">Token</label>
-                                            <input type="text" class="form-control" id="example-text-input" name="roi" >
+                                            <input type="text" class="form-control" id="example-text-input" name="token" required>
                                         </div>
                                         <div class="mb-4 col-lg-6">
                                             <label class="form-label" for="example-email-input">Price</label>
-                                            <input type="number" class="form-control" id="example-email-input" name="amount" >
+                                            <input type="number" class="form-control" id="example-email-input" name="amount" required>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="mb-4 col-lg-6">
                                             <label class="form-label" for="example-text-input">ROI</label>
-                                            <input type="text" class="form-control" id="example-text-input" name="roi" >
+                                            <input type="text" class="form-control" id="example-text-input" name="roi" required>
                                         </div>
                                         <div class="mb-4 col-lg-6">
                                             <label class="form-label" for="example-email-input">ROI Percentage(%)</label>
-                                            <input type="number" class="form-control" id="example-email-input" name="roi_rate" >
+                                            <input type="text" class="form-control" id="example-email-input" name="roi_rate" >
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-secondary">Save</button>

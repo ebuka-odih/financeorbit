@@ -10,13 +10,13 @@ class AdminStakingController extends Controller
 {
     public function index()
     {
-        $staking = Staking::all();
-        return view('admin.staking.list', compact('staking'));
+
     }
 
     public function create()
     {
-
+        $staking = Staking::all();
+        return view('admin.staking.list', compact('staking'));
     }
 
     public function store(Request $request)
@@ -47,6 +47,13 @@ class AdminStakingController extends Controller
     public function update(Request $request, $id)
     {
 
+    }
+
+    public function destroy($id)
+    {
+        $staking = Staking::findOrFail($id);
+        $staking->delete();
+        return redirect()->back()->with('success', "Deleted Successfully");
     }
 
     protected function data(Request $request)
