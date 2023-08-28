@@ -43,6 +43,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], fu
     Route::get('security', 'UserController@security')->name('security');
     Route::post('update/security', "UserController@updateSecurity")->name('updateSecurity');
 
+    Route::get('wallets', 'WalletsController@wallets')->name('wallets');
+
 //    Withdrawal Method
     Route::get('account', 'WithdrawMethodController@create')->name('account');
     Route::post('account', 'WithdrawMethodController@store')->name('account.store');
