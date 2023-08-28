@@ -77,7 +77,7 @@
                                     <div class="d-flex align-items-center">
                                         <i style="margin-right: 5px;" class="fa fa-coins fs-24 "></i>
                                         <div>
-                                            <h4 class="mb-0">Total Deposit</h4>
+                                            <h4 class="mb-0">Total Invested</h4>
                                         </div>
                                     </div>
                                 </div>

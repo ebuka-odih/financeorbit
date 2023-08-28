@@ -142,7 +142,7 @@
                         <li class="treeview">
                             <a href="#">
                                 <i style="margin-right: 2px;" class="fa fa-history "></i>
-                                <span>History</span>
+                                <span>All History</span>
                                 <span class="pull-right-container">
                               <i class="fa fa-angle-right pull-right"></i>
                             </span>
@@ -183,6 +183,12 @@
                         <li class="header">INVESTING</li>
                         <li>
                             <a href="transactions-view.html">
+                                <i style="margin-right: 2px;" class="fa fa-trademark "></i>
+                                <span>Stocks</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transactions-view.html">
                                 <i style="margin-right: 2px;" class="fa fa-tools "></i>
                                 <span>Mining</span>
                             </a>
@@ -198,6 +204,12 @@
                             <a href="transactions-view.html">
                                 <i style="margin-right: 2px;" class="fa fa-paper-plane "></i>
                                 <span>Subscription</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transactions-view.html">
+                                <i style="margin-right: 2px;" class="fa fa-book "></i>
+                                <span>Amazon KDP</span>
                             </a>
                         </li>
                     </ul>
