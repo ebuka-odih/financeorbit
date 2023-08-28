@@ -58,7 +58,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], fu
 
     //  Deposits Routes
     Route::get('deposit/transactions', "DepositController@transactions")->name('deposit.transactions');
-    Route::get('deposit', "DepositController@deposit")->name('deposit');
+    Route::get('crypto/deposit', "DepositController@deposit")->name('deposit');
+    Route::get('bank/deposit', "DepositController@bankDeposit")->name('bankDeposit');
     Route::post('process/deposit', "DepositController@processDeposit")->name('processDeposit');
     Route::get('deposit/payment/QH5H3Q64{id}2GER', "DepositController@payment")->name('payment');
     Route::patch('process/payment/QH5H3Q642GER', "DepositController@processPayment")->name('processPayment');

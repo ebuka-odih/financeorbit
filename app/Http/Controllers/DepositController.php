@@ -18,6 +18,10 @@ class DepositController extends Controller
         $deposits = Deposit::whereUserId(\auth()->id())->latest()->paginate(6);
         return view('dashboard.deposit.deposit', compact('wallets', 'deposits'));
     }
+    public function bankDeposit()
+    {
+        return view('dashboard.deposit.bank-deposit');
+    }
     public function transactions()
     {
         $count = Deposit::whereUserId(\auth()->id())->where('status', 0)->count();
