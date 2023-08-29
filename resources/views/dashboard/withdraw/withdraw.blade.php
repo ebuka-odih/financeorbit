@@ -90,6 +90,16 @@
                                                     </div>
                                                 </div>
                                                 <br>
+                                                @if(session()->has('success'))
+                                                    <div class="alert alert-success">
+                                                        {{ session()->get('success') }}
+                                                    </div>
+                                                @endif
+                                                @if(session()->has('error'))
+                                                    <div class="alert alert-danger">
+                                                        {{ session()->get('error') }}
+                                                    </div>
+                                                @endif
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="form-group">
@@ -161,7 +171,7 @@
                                                 <br>
                                                 <div class="wizard-footer">
                                                     <div class="col-12">
-                                                        <button  class="btn btn-success btn-lg pull-right" type="submit">Request Withdrawal</button>
+                                                        <button  class="btn btn-primary pull-right" type="submit">Request Withdrawal</button>
                                                         {{--                                                <button id="loader" style="display:none" class="btn btn-success btn-lg pull-right">Loading...</button>--}}
                                                     </div>
                                                 </div>

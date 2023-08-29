@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="zxx" dir="ltr">
 
-<!-- Mirrored from Yieldmarketstocker.com/markets.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jun 2022 09:26:49 GMT -->
 <head>
     <!-- Standard Meta -->
     <meta charset="utf-8">

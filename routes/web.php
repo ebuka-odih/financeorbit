@@ -34,8 +34,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], function(){
 
     Route::get('dashboard', "UserController@dashboard")->name('dashboard');
+    Route::get('wallet/overview', "UserController@wallet")->name('wallet');
     Route::get('assets', "UserController@assets")->name('assets');
-    Route::get('account/details', "UserController@wallet")->name('wallet');
     Route::get('referrals', "UserController@all_referrals")->name('all_referrals');
     Route::get('profile', 'UserController@profile')->name('profile');
     Route::patch('update/profile', 'UserController@updateProfile')->name('updateProfile');

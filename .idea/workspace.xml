@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/transactions/deposits.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/user/wallet-overview.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DepositController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DepositController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WithdrawController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WithdrawController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/RequestWithdraw.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/RequestWithdraw.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/add-wallet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/add-wallet.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/user/verify.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/withdraw/withdraw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/withdraw/withdraw.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/layout/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/layout/app2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/layout/app2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +158,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/dashboard/user" />
       <recent name="$PROJECT_DIR$/resources/views/dashboard/copy-traders" />
     </key>
   </component>
@@ -201,7 +210,9 @@
       <workItem from="1693172460168" duration="14281000" />
       <workItem from="1693213623858" duration="2277000" />
       <workItem from="1693217773854" duration="247000" />
-      <workItem from="1693218388496" duration="515000" />
+      <workItem from="1693218388496" duration="885000" />
+      <workItem from="1693220426025" duration="4974000" />
+      <workItem from="1693337828368" duration="5905000" />
     </task>
     <servers />
   </component>
@@ -231,6 +242,16 @@
           <url>file://$PROJECT_DIR$/resources/views/dashboard/trades/trades.blade.php</url>
           <line>291</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/pages/layout/app2.blade.php</url>
+          <line>174</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/dashboard/user/wallet-overview.blade.php</url>
+          <line>138</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

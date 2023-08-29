@@ -26,7 +26,7 @@ class DepositController extends Controller
     {
         $count = Deposit::whereUserId(\auth()->id())->where('status', 0)->count();
         $deposits = Deposit::whereUserId(\auth()->id())->latest()->paginate(6);
-        return view('dashboard.deposit.deposit-history', compact('deposits', 'count'));
+        return view('dashboard.transactions.deposits', compact('deposits', 'count'));
     }
 
     public function processDeposit(Request $request)

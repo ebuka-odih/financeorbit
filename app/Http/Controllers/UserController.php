@@ -26,6 +26,19 @@ class UserController extends Controller
         $investment = Subscribe::whereUserId(\auth()->id())->where('status', 1)->sum('amount');
         return view('dashboard.index', compact('deposits', 'trades', 'withdrawal','bonus', 'bonus2', 'user', 'investment'));
     }
+    public function wallet()
+    {
+        $user = Auth::user();
+        $trades = Trade::whereUserId(\auth()->id())->where('status', 0)->latest()->paginate(20);
+        $withdrawal = Withdraw::whereUserId(\auth()->id())->where('status', 1)->sum('amount');
+        $last_withdrawal = Withdraw::whereUserId(\auth()->id())->where('status', 1)->latest()->first();
+        $deposits = Deposit::whereUserId(\auth()->id())->where('status', 1)->sum('amount');
+        $last_deposit = Deposit::whereUserId(\auth()->id())->where('status', 1)->latest()->first();
+        $bonus = Funding::whereUserId(\auth()->id())->select('type', 'Bonus')->where('status', 1)->sum('amount');
+        $bonus2 = Funding::whereUserId(\auth()->id())->select('type', 'Referral-Bonus')->where('status', 1)->sum('amount');
+        $investment = Subscribe::whereUserId(\auth()->id())->where('status', 1)->sum('amount');
+        return view('dashboard.user.wallet-overview', compact('deposits', 'last_deposit', 'trades', 'withdrawal', 'last_withdrawal', 'bonus', 'bonus2', 'user', 'investment'));
+    }
 
     public function profile()
     {

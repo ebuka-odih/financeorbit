@@ -129,13 +129,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="wallets.html">
+                            <a href="{{ route('user.wallet') }}">
                                 <i style="margin-right: 2px;" class="fa fa-wallet"></i>
                                 <span>Wallets Overview</span>
                             </a>
                         </li>
                         <li>
-                            <a href="account.html">
+                            <a href="{{ route('user.deposit.transactions') }}">
                                 <i style="margin-right: 2px;" class="fa fa-money-bill "></i>
                                 <span>Transactions</span>
                             </a>

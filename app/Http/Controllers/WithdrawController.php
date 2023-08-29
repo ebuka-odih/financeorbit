@@ -65,11 +65,11 @@ class WithdrawController extends Controller
                 $withdraw->save();
                 Mail::to($user->email)->send(new RequestWithdraw($data));
                 Mail::to(env('MAIL_FROM_NAME'))->send( new AdminWithdrawAlert($data));
-                return redirect()->back()->with('success_message', 'Your withdrawal request has been sent successfully, awaiting approval');
+                return redirect()->back()->with('success', 'Your withdrawal request has been sent successfully, awaiting approval');
             }
-            return redirect()->back()->with('nop', "You can't withdraw less than 50 USD");
+            return redirect()->back()->with('error', "You can't withdraw less than 50 USD");
         }
-        return redirect()->back()->with('low_balance', "Insufficient Balance");
+        return redirect()->back()->with('error', "Insufficient Balance");
 
     }
 
