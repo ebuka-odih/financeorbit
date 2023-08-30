@@ -15,7 +15,7 @@ class Deposit extends Model
 
     public function transId()
     {
-        return "#TNX43265".$this->id;
+        return "#TNX465".$this->id;
     }
 
     public function payment_method()
@@ -26,11 +26,11 @@ class Deposit extends Model
     public function status()
     {
         if ($this->status == 0){
-            return "<span class='badge bg-warning'>Pending</span>";
+            return "<span class='badge badge-pill badge-warning'>Pending</span>";
         }elseif ($this->status > 0){
-            return "<span class='badge bg-success '>Successful</span>";
+            return "<span class='badge badge-pill badge-success'>Successful</span>";
         }else{
-            return "<span class='badge bg-danger'>Cancelled</span>";
+            return "<span class='badge badge-pill badge-danger'>Cancelled</span>";
         }
     }
     public function adminStatus()

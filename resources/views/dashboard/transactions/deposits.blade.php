@@ -46,7 +46,43 @@
                         <!-- /.box-header -->
                         <div class="box-body">
 
+                            <div class="col-12">
+                                <div class="box">
 
+                                    <!-- /.box-header -->
+                                    <div class="box-body no-padding">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>TXid</th>
+                                                    <th>Amount</th>
+                                                    <th>Payment Method</th>
+                                                    <th>Date</th>
+                                                    <th>Status</th>
+                                                    <th><i class="fa fa-dot-circle"></i></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach($deposits as $item)
+                                                <tr>
+                                                    <td>{{ $item->transId() }}</td>
+                                                    <td>$@money($item->amount)</td>
+                                                    <td>{{ $item->payment_method->name }}</td>
+                                                    <td><span class="text-muted"><i class="fa fa-clock-o"></i>{{ date('M d, Y', strtotime($item->created_at)) }} Oct 16, 2017</span> </td>
+                                                    <td><span class="badge badge-pill badge-success">Paid</span></td>
+                                                    <td>EN</td>
+                                                </tr>
+                                                @endforeach
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /.box -->
+                            </div>
                         </div>
                         <!-- /.box-body -->
                     </div>
