@@ -27,8 +27,8 @@
                         <div class="box-body ">
                             <div class="clearfix">
                                 <div class="row">
-                                    <a style="margin-right: 5px" href="" class="col-lg-3 col-md-12 waves-effect waves-light btn btn-lg mb-5 bg-gradient-info "><i class="fa fa-arrow-circle-down"></i> Deposits</a>
-                                    <a style="margin-right: 5px" href="" class="col-lg-3 col-md-12 waves-effect waves-light btn btn-lg mb-5 bg-gradient-secondary "><i class="fa fa-arrow-circle-up"></i> Withdrawal</a>
+                                    <a style="margin-right: 5px" href="{{ route('user.deposit.transactions') }}" class="col-lg-3 col-md-12 waves-effect waves-light btn btn-lg mb-5 bg-gradient-secondary "><i class="fa fa-arrow-circle-down"></i> Deposits</a>
+                                    <a style="margin-right: 5px" href="{{ route('user.withdraw.transactions') }}" class="col-lg-3 col-md-12 waves-effect waves-light btn btn-lg mb-5 bg-gradient-info "><i class="fa fa-arrow-circle-up"></i> Withdrawal</a>
                                     <a href="" class="col-lg-3 col-md-12 waves-effect waves-light btn btn-lg mb-5 bg-gradient-secondary "><i class="fa fa-money-bill-wave"></i> Funding</a>
 
                                 </div>
@@ -41,7 +41,7 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h4 class="box-title mb-5">Deposits Transactions</h4>
+                            <h4 class="box-title mb-5">Withdrawal Transactions</h4>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -64,15 +64,15 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                @foreach($deposits as $item)
-                                                <tr>
-                                                    <td>{{ $item->transId() }}</td>
-                                                    <td>$@money($item->amount)</td>
-                                                    <td>{{ $item->payment_method->name }}</td>
-                                                    <td><span class="text-muted"><i class="fa fa-clock-o"></i>{{ date('M d, Y', strtotime($item->created_at)) }} Oct 16, 2017</span> </td>
-                                                    <td><span class="badge badge-pill badge-success">Paid</span></td>
-                                                    <td>EN</td>
-                                                </tr>
+                                                @foreach($withdraw as $item)
+                                                    <tr>
+                                                        <td>{{ $item->transId() }}</td>
+                                                        <td>$@money($item->amount)</td>
+                                                        <td>...</td>
+                                                        <td><span class="text-muted"><i class="fa fa-clock-o"></i>{{ date('M d, Y', strtotime($item->created_at)) }}</span> </td>
+                                                        <td><span class="badge badge-pill badge-success">Paid</span></td>
+                                                        <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
+                                                    </tr>
                                                 @endforeach
 
                                                 </tbody>
