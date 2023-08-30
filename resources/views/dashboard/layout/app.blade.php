@@ -168,7 +168,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="transactions-view.html">
+                            <a href="{{ route('user.copy-trader.create') }}">
                                 <i style="margin-right: 1px; " class="fa fa-copy "></i>
                                 <span>Copy Trader</span>
                             </a>

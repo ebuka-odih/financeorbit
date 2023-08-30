@@ -1,97 +1,71 @@
 @extends('dashboard.layout.app')
 @section('content')
 
-    <div class="main-container container-fluid">
-        <div class="inner-body">
-            <div id="mobileshow" class="see"></div>
-            <div class="sees hide-mobile"></div>
-            <!--Row-->
-
-            <div class="row row-sm">
-                <div class="col-md-12 col-lg-12">
-                    <div class="card custom-card">
-                        <div class="card-body">	<div>
-                                <h6 class="main-content-label mb-1">Get Subscription</h6>
-                                <p> Tap on any of the Plans below to purchase a plan.</p>
-
-                                <h5> Current Account Type : Basic</h5>
-
-                            </div>
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="d-flex align-items-center">
+                    <div class="me-auto">
+                        <h4 class="page-title">Dashboard</h4>
+                        <div class="d-inline-block align-items-center">
+                            <nav>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="{{ route('user.dashboard') }}"><i class="mdi mdi-home-outline"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Futures Trading</li>
+                                </ol>
+                            </nav>
                         </div>
+
                     </div>
                 </div>
             </div>
-
-
-            <div class="alert alert-info fade show" role="alert">
-                <center style="color:green;">Bal:	{{ auth()->user()->currency }}@money(auth()->user()->balance)</center>
-
-            </div>
-
-            <div class="row row-sm">
-
-                @foreach($plans as $item)
-                <div class="col-xxl-3 col-xl-6 col-lg-6 col-sm-6">
-                    <div class="card card-pricing custom-card">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <div class="mb-0">
-                                    <h5 class="fs-16 tx-medium">STANDARD</h5>
-                                    <h2 class="mt-2 mb-0 text-primary">{{ auth()->user()->currency }}@money($item->min_deposit) <span class="text-muted fs-12">/ Minimum</span></h2>
-                                    <p class="text-dark mt-3 mb-0 fs-14">High ROI After Trading Session</p>
-                                </div>
-                                <div class="text-end ms-auto">
-                                    <span class="badge bg-primary-light">Try It Now</span>
-                                </div>
-                            </div>
-                            <hr class="message-inner-separator">
-                            <div class="pricingContent1">
-                                <ul>
-                                    <li class="pt-1"><i class="fe fe-check me-2 text-success bg-success-transparent font-weight-bold p-1 tx-12 rounded-circle"></i><span class="tx-semibold">{{ $item->term_days }} Days</span> Duration</li>
-
-
-                                    <li><i class="fe fe-check me-2 text-success bg-success-transparent font-weight-bold p-1 tx-12 rounded-circle"></i><span class="tx-semibold">{{ $item->roi }}%</span> ROI</li>
-
-
-                                    <li><i class="fe fe-check me-2 text-success bg-success-transparent font-weight-bold p-1 tx-12 rounded-circle"></i><span class="tx-semibold">24/7</span> Support</li>
-                                </ul>
-
-                                <form  action="{{ route('user.subscribe') }}" method="post">
-                                    @csrf
-                                    @if(session()->has('declined'))
-                                        <div class="alert alert-danger">
-                                            {{ session()->get('declined') }}
+            <!-- Main content -->
+            <section class="content">
+                <div class="col-xxxl-12 col-xl-7 col-12">
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="row">
+                                <style>
+                                    #example2 {
+                                        border: 1px solid;
+                                        padding: 10px;
+                                        box-shadow: 5px 10px #888888;
+                                    }
+                                </style>
+                                @foreach($plans as $item)
+                                    <div id="example2" class="col-lg-3 col-4">
+                                        <div class="box no-shadow">
+                                            <div class="box-body">
+                                                <div class="contact-page-aside">
+                                                    <ul class="list-style-none fs-16">
+                                                        <li>
+                                                            <img src="" alt="">
+                                                        </li>
+                                                        <li class="box-label">
+                                                            <span class="text-primary fs-4">Min: $@money($item->min_deposit)</span> - <span class="text-success fs-4">$UNLIMITED</span>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a class="text-danger" href="javascript:void(0)">Work <span class="text-danger">103</span></a></li>
+                                                        <li><a class="text-warning" href="javascript:void(0)">Family <span class="text-warning">19</span></a></li>
+                                                        <li><a class="text-info" href="javascript:void(0)">Friends <span class="text-info">623</span></a></li>
+                                                        <li><a class="text-success" href="javascript:void(0)">Private <span class="text-success">53</span></a></li>
+                                                        <li class="box-label"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-success mt-10">+ Create New Label</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
-                                    @endif
-                                    @if(session()->has('insufficient'))
-                                        <div class="alert alert-danger">
-                                            {{ session()->get('insufficient') }}
-                                        </div>
-                                    @endif
-
-                                    <input type="hidden" name="subscription_id" value="{{ $item->id }}">
-                                    <div class="form-group text-start">
-                                        <label class="tx-medium">Amount</label>
-                                        <input class="form-control" name="amount" placeholder="1000" type="text" required="">
                                     </div>
-
-                                    <button type="submit"  class="btn ripple btn-primary-transparent btn-block mb-2"> Subscribe to Plan <i class="mdi mdi-arrow-right ms-1"></i>
-                                    </button>
-
-                                </form>
+                                @endforeach
                             </div>
+
+
                         </div>
                     </div>
                 </div>
-                @endforeach
-
-            </div>
-
-
-
-
-
+            </section>
+            <!-- /.content -->
         </div>
     </div>
 
-@endsection`
+@endsection

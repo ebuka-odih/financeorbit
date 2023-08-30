@@ -481,7 +481,55 @@
                                     <button type="submit" name="trad" class="btn btn-outline-primary btn-block rounded-6 mt-4">Place Order</button>
 
                                 </form>
+
                             </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                  <div class="box-body">
+
+                        <div class="col-12">
+                            <div class="box">
+
+
+                                <!-- /.box-header -->
+                                <div class="box-body no-padding">
+                                    <h3 class="text-center mb-3">Open Trades</h3>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Pair</th>
+                                                <th>Action</th>
+                                                <th>Entry</th>
+                                                <th>SL</th>
+                                                <th>TP</th>
+                                                <th>Results</th>
+                                                <th><i class="fa fa-dot-circle"></i></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($trades as $item)
+                                                <tr>
+                                                    <td>{{ $item->created_at }}</td>
+                                                    <td>{{ $item->symbol }}</td>
+                                                    <td>{{ $item->trade_action }}</td>
+                                                    <td>{{ $item->execution_time }}</td>
+                                                    <td>{{ $item->sl }}</td>
+                                                    <td>{{ $item->tp }}</td>
+                                                    <td>{{ $item->profit ? : "$ 0.00" }}</td>
+                                                    <td>{!! $item->status() !!}</td>
+                                                </tr>
+                                            @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
                         </div>
                     </div>
 

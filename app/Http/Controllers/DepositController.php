@@ -22,6 +22,7 @@ class DepositController extends Controller
     {
         return view('dashboard.deposit.bank-deposit');
     }
+
     public function transactions()
     {
         $count = Deposit::whereUserId(\auth()->id())->where('status', 0)->count();
@@ -35,7 +36,6 @@ class DepositController extends Controller
            'amount' => 'required',
            'payment_method_id' => 'required',
         ]);
-
         $deposit = new Deposit();
         $deposit->user_id = Auth::id();
         $deposit->amount = $request->amount;
@@ -43,6 +43,7 @@ class DepositController extends Controller
         $deposit->save();
         Mail::to($deposit->user->email)->send(new DepositAlert($deposit));
         return redirect()->route('user.payment', $deposit->id);
+
     }
 
     public function payment($id)
@@ -72,7 +73,6 @@ class DepositController extends Controller
         return redirect()->back()->with('declined', "Please Upload Your Payment Screenshot ");
 
     }
-
 
     public function depositDetail($id)
     {
