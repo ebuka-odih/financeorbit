@@ -162,7 +162,7 @@
                         <li class="header">TRADING</li>
 
                         <li>
-                            <a href="transactions-view.html">
+                            <a href="{{ route('user.trade') }}">
                                 <i style="margin-right: 2px;" class="fa fa-chart-area "></i>
                                 <span>Futures</span>
                             </a>
