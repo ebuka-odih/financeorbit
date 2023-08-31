@@ -23,8 +23,16 @@
             <!-- Main content -->
             <section class="content">
                 <div class="col-xxxl-12 col-xl-7 col-12">
+
                     <div class="box">
                         <div class="box-body">
+                            <p>Get More Expert Traders and Earn More Profits <a href="account_upgrade.php">GO PRO</a> </p>
+
+                            <div class="alert alert-info fade show" role="alert">
+                                <center style="color:;">MINIMAL COPY TRADE AMOUNT: {{ auth()->user()->currency }} 500.00</center>
+
+                            </div>
+                            <hr>
                             <div class="row">
                                 <style>
                                     #example2 {
@@ -50,7 +58,7 @@
                                                     <li><a class="text-warning" href="javascript:void(0)">Trades Won in Ratio: <span class="text-warning">{{ $item->won_trades }}%</span></a></li>
                                                     <li><a class="text-danger" href="javascript:void(0)">Trades lost in Ratio: <span class="text-danger">{{ $item->lost_trades }}%</span></a></li>
                                                     <li><a class="text-success" href="javascript:void(0)">Trade Percentage: <span class="text-success">{{ $item->total_pec }}%</span></a></li>
-                                                    <li class="box-label"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-success mt-10">+ Create New Label</a></li>
+                                                    <li class="box-label"><a href="javascript:void(0)"  class="btn btn-success mt-10"><i class="fa fa-clipboard"></i> Copy Trader</a></li>
                                                 </ul>
                                             </div>
                                         </div>
