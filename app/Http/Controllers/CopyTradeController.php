@@ -24,13 +24,19 @@ class CopyTradeController extends Controller
     public function store(Request $request)
     {
         $data = new CopyTrade();
-        $data->copy_traders_id = $request->trader_id;
-        $data->user_id = $request->user_id;
-        $user = User::findOrFail($request->user_id);
-        $user->balance -= 500;
-        $user->save();
-        $data->save();
-        return redirect()->back()->with('success', "Trader Copied Successfully");
+        if (auth()->user()->balance > 500)
+        {
+            $data->copy_traders_id = $request->trader_id;
+            $data->amount = 500;
+            $data->user_id = auth()->id();
+            $data->save();
+            $user = User::findOrFail($data->user_id);
+            $user->balance -= 500;
+            $user->save();
+            return redirect()->back()->with('success', "Trader Copied Successfully");
+        }
+
+        return redirect()->back()->with('error', "Insufficient Balance");
     }
 
     public function show($id)

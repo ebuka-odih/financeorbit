@@ -68,10 +68,10 @@
                                     {{ $item->won_trades }}
                                 </td>
                                 <td class="d-none d-sm-table-cell">
-                                    ${{ $item->lost_trades }}
+                                    {{ $item->lost_trades }}
                                 </td>
                                 <td class="d-none d-sm-table-cell">
-                                    ${{ $item->total_pec }}
+                                    {{ $item->total_pec }}%
                                 </td>
                                 <td class="text-center">
                                     <div class="btn-group">

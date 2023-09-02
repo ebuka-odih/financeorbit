@@ -10,8 +10,9 @@ class CopyTraders extends Model
 
     public function copy_trades()
     {
-        return $this->hasMany(CopyTrade::class);
+        return $this->hasMany(CopyTrade::class, 'copy_traders_id');
     }
+
 
     public function pro_trade(){
         if ($this->pro_trade == 1)

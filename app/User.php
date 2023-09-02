@@ -106,9 +106,13 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Subscribe::class, "user_id");
     }
-    public function user()
+    public function message()
     {
         return $this->hasMany(Message::class, 'user_id');
+    }
+    public function copy_trade()
+    {
+        return $this->hasMany(CopyTrade::class, 'user_id');
     }
 
     public function getProfilePicAttribute($value) {
@@ -118,17 +122,6 @@ class User extends Authenticatable implements MustVerifyEmail
             return "https://ui-avatars.com/api/?size=256&background=".$background."&color=fff&name=".urlencode($this->name);
         }
         return '/avatar/' . $this->attributes['avatar'];
-    }
-
-    public function BTCbalance($amount)
-    {
-        $currency = Currency::convert()
-            ->from('USD')
-            ->to('BTC')
-            ->source('crypto')
-            ->round(7)
-            ->get();
-        return $currency * $amount;
     }
 
     public function messageCount()

@@ -60,4 +60,6 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::get('edit/message/{id}', "Admin\AdminMessageController@editMessage")->name('editMessage');
     Route::patch('update/message/{id}', "Admin\AdminMessageController@updateMessage")->name('updateMessage');
 
+//    Copy Trades Route
+    Route::get('copy-trades', "Admin\InvestCopyTradeController@copiedTraders")->name('copiedTraders');
 });

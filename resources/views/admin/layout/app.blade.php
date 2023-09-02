@@ -190,7 +190,7 @@
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                <a class="nav-main-link" href="{{ route('admin.copiedTraders') }}">
                                     <span class="nav-main-link-name">Copied Trades</span>
                                 </a>
                             </li>

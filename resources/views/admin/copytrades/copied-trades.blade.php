@@ -7,7 +7,7 @@
         <div class="bg-body-light">
             <div class="content content-full">
                 <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-                    <h1 class="flex-grow-1 fs-3 fw-semibold my-2 my-sm-3">Copied Trades</h1>
+                    <h1 class="flex-grow-1 fs-3 fw-semibold my-2 my-sm-3">Copy Traders</h1>
                 </div>
             </div>
         </div>
@@ -20,6 +20,7 @@
             <div class="block block-rounded">
                 <div class="block-header block-header-default">
                     {{--                    <a href="" class="btn btn-secondary">Add Trader</a>--}}
+                    <button type="button" class="btn btn-primary push" data-bs-toggle="modal" data-bs-target="#modal-block-normal">Add Trader</button>
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -36,65 +37,66 @@
                     @endif
                 </div>
                 <div class="block-content">
+                    <table class="table table-striped table-vcenter">
+                        <thead>
+                        <tr>
+                            <th class="text-center" style="width: 50px;">#</th>
+                            <th>Copied Trader</th>
+                            <th>User</th>
+                            <th>Amount</th>
+                            <th>ROI</th>
+                            <th class="d-none d-sm-table-cell" style="width: 15%;">Total Percentage</th>
+                            <th class="text-center" style="width: 100px;">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($trades as $index => $item)
+                            <tr>
+                                <th class="text-center" scope="row">{{ $index + 1 }}</th>
+                                <td class="fw-semibold">
+                                    <span>{{ optional($item->copy_traders)->username }}</span>
+                                    <span>({{ optional($item->copy_traders)->accuracy }}%)</span>
+                                </td>
+                                <td class="fw-semibold">
+                                    {{ optional($item->user)->fullname() }}
+                                </td>
+                                <td class="fw-semibold">
+                                    $@money($item->amount)
+                                </td>
+                                <td class="fw-semibold">
+                                    @money($item->roi)
+                                </td>
+                                <td class="d-none d-sm-table-cell">
+                                    {{ $item->roi_pec ? : '0' }}%
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <a href="{{ route('admin.copy-traders.edit', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                        <a href="{{ route('admin.copy-traders.edit', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit">
+                                            <i class="fa fa-pencil-alt"></i>
+                                        </a>
 
-                    <div class="block block-rounded">
-                        <div class="block-content block-content-full">
-                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _js/pages/be_tables_datatables.js -->
-                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                                        <form method="POST" action="{!! route('admin.copy-traders.destroy', $item->id) !!}" accept-charset="UTF-8">
+                                            <input name="_method" value="DELETE" type="hidden">
+                                            {{ csrf_field() }}
 
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered table-striped table-vcenter js-dataTable-full dataTable no-footer" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
-                                                <thead>
-                                                <tr>
-                                                    <th class="text-center sorting sorting_asc" style="width: 100px;" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#: activate to sort column descending">#</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">User</th>
-                                                    <th class="sorting"  tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending">Amount</th>
-                                                    <th class="sorting"  tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Access: activate to sort column ascending">ROI</th>
-                                                    <th class="sorting"  tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Access: activate to sort column ascending">Status</th>
-                                                    <th class="sorting"  tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Access: activate to sort column ascending">Trade Details</th>
-                                                    <th  class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Registered: activate to sort column ascending">Action</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                @foreach($trades as $index => $item)
-                                                    <tr class="odd">
-                                                        <td class="text-center sorting_1">{{ $index + 1 }}</td>
-                                                        <td class="fw-semibold">
-                                                            <a href="{{ route('admin.userDetails', $item->id) }}">{{ $item->user->name }}</a>
-                                                        </td>
-                                                        <td class="fw-semibold">
-                                                            $@money($item->amount)
-                                                        </td>
-                                                        <td class="fw-semibold">
-                                                            $@money($item->roi)({{ $item->roi_pec }}%)
-                                                        </td>
-                                                        <td class="fw-semibold">
-                                                            {!! $item->status() !!}
-                                                        </td>
-                                                        <td class="d-none d-sm-table-cell">
-                                                            <span>{{ $item->copytrade->name }}</span>
-                                                            <span>{{ $item->copytrade->won_trades }}</span>
-                                                            <span>{{ $item->copytrade->lost_trades }}</span>
+                                            <div class="btn-group btn-group-xs pull-right" role="group">
+                                                <button type="submit" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" onclick="return confirm(&quot;Delete Item?&quot;)">
+                                                    <i class="fa fa-times"></i>
+                                                </button>
 
-                                                        </td>
-                                                        <td>
-                                                            <a href=""><li class="fa fa-pencil"></li></a>
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
-                                                </tbody>
-                                            </table>
+                                            </div>
 
-                                        </div>
+                                        </form>
                                     </div>
-                                </div>
+                                </td>
+                            </tr>
+                        @endforeach
 
-                            </div>
-                        </div>
-                    </div>
-
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <!-- END Striped Table -->
@@ -103,4 +105,67 @@
         <!-- END Page Content -->
     </main>
 
+
+    <div class="modal" id="modal-block-normal" tabindex="-1" aria-labelledby="modal-block-normal" aria-hidden="true"  role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="block block-rounded block-themed block-transparent mb-0">
+                    <div class="block-header bg-primary-dark">
+                        <h3 class="block-title">Add Copy Trader</h3>
+                        <div class="block-options">
+                            <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa fa-fw fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <form action="{{ route('admin.copy-traders.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+
+                        <div class="block-content">
+
+                            <div class="row">
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Image</label>
+                                    <input type="file" class="form-control" id="example-text-input" name="pro_image" >
+                                </div>
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Username</label>
+                                    <input type="text" class="form-control" id="example-text-input" name="username" >
+                                </div>
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Accuracy(%)</label>
+                                    <input type="text" class="form-control" id="example-text-input" name="accuracy" >
+                                </div>
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Won Trades(%)</label>
+                                    <input type="text" class="form-control" id="example-text-input" name="won_trades" >
+                                </div>
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Lost Trades(%)</label>
+                                    <input type="text" class="form-control" id="example-text-input" name="lost_trades" >
+                                </div>
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Total Percentage(%)</label>
+                                    <input type="text" class="form-control" id="example-text-input" name="total_pec" >
+                                </div>
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Pro Signal</label>
+                                    <select name="pro_trade" id="" class="form-control">
+                                        <option >Select Option</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="block-content block-content-full text-end bg-body">
+                            <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

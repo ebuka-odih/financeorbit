@@ -11,4 +11,8 @@ class CopyTrade extends Model
     {
         return $this->belongsTo(CopyTraders::class);
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

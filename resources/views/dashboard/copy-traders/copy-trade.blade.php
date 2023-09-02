@@ -46,20 +46,36 @@
                                     <div class="box no-shadow">
                                         <div class="box-body">
                                             <div class="contact-page-aside">
-                                                <ul class="list-style-none fs-16">
+                                                <form action="{{ route('user.copy-trader.store') }}" method="POST">
+                                                    @csrf
 
-                                                    <li class="box-label col-6 offset-lg-4">
-                                                        <img style="border-radius: 50%" height="60" width="60" src="https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper-thumbnail.png" alt="">
+                                                    <input type="hidden" name="trader_id" value="{{ $item->id }}">
+                                                    <ul class="list-style-none fs-16">
+                                                        <li class="box-label col-6 offset-lg-4">
+                                                            <img style="border-radius: 50%" height="60" width="60" src="https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper-thumbnail.png" alt="">
 
-                                                        <span class="text-primary fs-4 mt-4">{{ $item->username }}</span>
-                                                    </li>
-                                                    <li class="divider"></li>
-                                                    <li><a class="text-info" href="javascript:void(0)">Accuracy: <span class="text-info">{{ $item->accuracy }}%</span></a></li>
-                                                    <li><a class="text-warning" href="javascript:void(0)">Trades Won in Ratio: <span class="text-warning">{{ $item->won_trades }}%</span></a></li>
-                                                    <li><a class="text-danger" href="javascript:void(0)">Trades lost in Ratio: <span class="text-danger">{{ $item->lost_trades }}%</span></a></li>
-                                                    <li><a class="text-success" href="javascript:void(0)">Trade Percentage: <span class="text-success">{{ $item->total_pec }}%</span></a></li>
-                                                    <li class="box-label"><a href="javascript:void(0)"  class="btn btn-success mt-10"><i class="fa fa-clipboard"></i> Copy Trader</a></li>
-                                                </ul>
+                                                            <span class="text-primary fs-4 mt-4">{{ $item->username }}</span>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a class="text-info" href="javascript:void(0)">Accuracy: <span class="text-info">{{ $item->accuracy }}%</span></a></li>
+                                                        <li><a class="text-warning" href="javascript:void(0)">Trades Won in Ratio: <span class="text-warning">{{ $item->won_trades }}%</span></a></li>
+                                                        <li><a class="text-danger" href="javascript:void(0)">Trades lost in Ratio: <span class="text-danger">{{ $item->lost_trades }}%</span></a></li>
+                                                        <li><a class="text-success" href="javascript:void(0)">Trade Percentage: <span class="text-success">{{ $item->total_pec }}%</span></a></li>
+                                                        <li><hr></li>
+                                                        @if(session()->has('success'))
+                                                            <div class="alert alert-info">
+                                                                {{ session()->get('success') }}
+                                                            </div>
+                                                        @endif
+                                                        @if(session()->has('error'))
+                                                            <div class="alert alert-danger">
+                                                                {{ session()->get('error') }}
+                                                            </div>
+                                                        @endif
+                                                        <li class="box-label"><button type="submit"  class="btn btn-success mt-10 col-12"><i class="fa fa-clipboard"></i> Copy Trader</button></li>
+                                                    </ul>
+                                                </form>
+
                                             </div>
                                         </div>
                                     </div>
