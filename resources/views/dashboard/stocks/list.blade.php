@@ -46,7 +46,7 @@
                                 <div class="col-12 mt-4">
                                     <form action="">
                                         <div class="col-12">
-                                            <input type="text" class="form-control" name="amount">
+                                            <input type="text" class="form-control" name="amount" placeholder="@money($item->amount)">
                                         </div>
                                         <div class="col-12 mt-2">
                                             <button type="submit" class="btn btn-primary">Invest</button>

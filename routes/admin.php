@@ -46,6 +46,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::resource('signal', "Admin\AdminSignalController");
     Route::resource('staking', "Admin\AdminStakingController");
     Route::resource('stocks', "Admin\StocksAdminController");
+    Route::resource('mining', "Admin\MiningAdminController");
 
     //Trades Routes
     Route::get('open/trades/history', "Admin\AdminTradesController@openTrades")->name('trades.open');

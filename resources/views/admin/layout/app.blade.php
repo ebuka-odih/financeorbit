@@ -239,12 +239,12 @@
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
-                                    <span class="nav-main-link-name">Mined Plans</span>
+                                <a class="nav-main-link" href="{{ route('admin.mining.index') }}">
+                                    <span class="nav-main-link-name">All Mined</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                <a class="nav-main-link" href="{{ route('admin.mining.create') }}">
                                     <span class="nav-main-link-name">Add Mining Plan</span>
                                 </a>
                             </li>
