@@ -28,7 +28,6 @@
                     <div class="box">
                         <div class="box-header">
                             <h1 class="text-center"><strong>DAILY SIGNALS</strong></h1>
-
                             <p class="text-center">Get Expert Signals and Earn More Profits <a href="account_upgrade.php">GO PRO</a> </p>
 
                         </div>
@@ -43,7 +42,7 @@
                                     }
                                 </style>
                                 @foreach($signals as $item)
-                                    <div id="example2" class="col-lg-3 col-md-6 col-sm-12">
+                                    <div style="margin-right: 20px; margin-bottom: 20px" id="example2" class="col-lg-3 col-md-6 col-sm-12">
                                         <div class="box no-shadow">
                                             <div class="box-body">
                                                 <div class="contact-page-aside">
@@ -62,7 +61,7 @@
                                                             <li><a class="text-danger" href="javascript:void(0)">TAKE PROFIT: <span class="text-danger">{{ $item->tp }}</span></a></li>
                                                             <li><a class="text-success" href="javascript:void(0)">STOP LOSS: <span class="text-success">{{ $item->sl }}</span></a></li>
                                                             <li><a class="text-secondary" href="javascript:void(0)">TAKE ACTION: <span class="text-secondary">{{ $item->ta }}</span></a></li>
-                                                            <li><a class="text-primary" href="javascript:void(0)">TIME: <span class="text-primary">{{ $item->time }}</span></a></li>
+                                                            <li><a class="text-primary" href="javascript:void(0)">TIME: <span class="text-primary">{{ $item->time }} Mins</span></a></li>
 
                                                         </ul>
                                                     </form>
