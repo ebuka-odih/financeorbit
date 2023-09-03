@@ -33,7 +33,7 @@
                                         box-shadow: 5px 10px #888888;
                                     }
                                 </style>
-                                @foreach($plans as $item)
+                                @forelse($plans as $item)
                                     <div id="example2" class="col-lg-3 col-4">
                                         <div class="box no-shadow">
                                             <div class="box-body">
@@ -56,7 +56,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
+                                @empty
+                                    <h4 class="text-center">No subscription available</h4>
+                                @endforelse
                             </div>
 
 

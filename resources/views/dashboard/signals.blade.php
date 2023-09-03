@@ -41,7 +41,7 @@
                                         box-shadow: 5px 10px #888888;
                                     }
                                 </style>
-                                @foreach($signals as $item)
+                                @forelse($signals as $item)
                                     <div style="margin-right: 20px; margin-bottom: 20px" id="example2" class="col-lg-3 col-md-6 col-sm-12">
                                         <div class="box no-shadow">
                                             <div class="box-body">
@@ -70,7 +70,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
+                                @empty
+                                    <h4 class="text-center">No trading signal available</h4>
+                                @endforelse
                             </div>
 
 
