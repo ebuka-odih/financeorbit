@@ -18,9 +18,8 @@
 
             <!-- Striped Table -->
             <div class="block block-rounded">
-                <div class="block-header block-header-default">
-                    {{--                    <a href="" class="btn btn-secondary">Add Trader</a>--}}
-                    <button type="button" class="btn btn-primary push" data-bs-toggle="modal" data-bs-target="#modal-block-normal">Add Trader</button>
+
+                <div class="block-content">
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -35,8 +34,6 @@
                             {{ session()->get('success') }}
                         </div>
                     @endif
-                </div>
-                <div class="block-content">
                     <table class="table table-striped table-vcenter">
                         <thead>
                         <tr>
@@ -74,11 +71,7 @@
                                         <a href="{{ route('admin.copy-traders.edit', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit">
                                             <i class="fa fa-eye"></i>
                                         </a>
-                                        <a href="{{ route('admin.copy-traders.edit', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit">
-                                            <i class="fa fa-pencil-alt"></i>
-                                        </a>
-
-                                        <form method="POST" action="{!! route('admin.copy-traders.destroy', $item->id) !!}" accept-charset="UTF-8">
+                                        <form method="POST" action="{!! route('admin.deleteTrade', $item->id) !!}" accept-charset="UTF-8">
                                             <input name="_method" value="DELETE" type="hidden">
                                             {{ csrf_field() }}
 

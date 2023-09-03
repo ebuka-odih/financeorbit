@@ -61,5 +61,6 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::patch('update/message/{id}', "Admin\AdminMessageController@updateMessage")->name('updateMessage');
 
 //    Copy Trades Route
-    Route::get('copy-trades', "Admin\InvestCopyTradeController@copiedTraders")->name('copiedTraders');
+    Route::get('copy-trades', "Admin\InvestCopyTradeController@copiedTrades")->name('copiedTrades');
+    Route::delete('delete/copy-trades/{id}', "Admin\InvestCopyTradeController@deleteTrade")->name('deleteTrade');
 });
