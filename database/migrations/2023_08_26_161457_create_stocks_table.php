@@ -18,6 +18,7 @@ class CreateStocksTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('image')->nullable();
+            $table->decimal('amount', 11, 2)->nullable();
             $table->longText('description')->nullable();
         });
     }

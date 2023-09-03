@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/stocks/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/signals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/signals.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/StocksAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/StocksAdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_26_161457_create_stocks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_26_161457_create_stocks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_26_170526_create_invest_stocks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_26_170526_create_invest_stocks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/stock/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/stock/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +217,7 @@
       <workItem from="1693555231966" duration="37000" />
       <workItem from="1693666551658" duration="6677000" />
       <workItem from="1693725218142" duration="1525000" />
-      <workItem from="1693728322960" duration="1633000" />
+      <workItem from="1693728322960" duration="8737000" />
     </task>
     <servers />
   </component>

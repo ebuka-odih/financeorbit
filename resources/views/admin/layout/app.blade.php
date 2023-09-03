@@ -257,12 +257,12 @@
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                <a class="nav-main-link" href="{{ route('admin.stocks.index') }}">
                                     <span class="nav-main-link-name">Purchased Stocks</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                <a class="nav-main-link" href="{{ route('admin.stocks.create') }}">
                                     <span class="nav-main-link-name">Add Stocks</span>
                                 </a>
                             </li>

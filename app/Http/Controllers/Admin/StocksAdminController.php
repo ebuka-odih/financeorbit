@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\InvestStock;
 use App\Stock;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,8 @@ class StocksAdminController extends Controller
 {
    public function index()
    {
-
+       $invested = InvestStock::all();
+       return view('admin.stock.invested', compact('invested'));
    }
 
    public function create()
@@ -22,6 +24,7 @@ class StocksAdminController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'amount' => 'required',
             'description' => 'nullable',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
         ]);
@@ -33,12 +36,14 @@ class StocksAdminController extends Controller
             $image->move($destinationPath, $input['imagename']);
 
             $data->name = $request->name;
+            $data->amount = $request->amount;
             $data->description = $request->description;
             $data->imgae = $input['imagename'];
             $data->save();
             return redirect()->back()->with('success', 'Created Successfully');
         }
         $data->name = $request->name;
+        $data->amount = $request->amount;
         $data->description = $request->description;
         $data->save();
         return redirect()->back()->with('success', 'Created Successfully');

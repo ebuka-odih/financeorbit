@@ -19,6 +19,7 @@ class CreateInvestStocksTable extends Migration
             $table->bigInteger('user_id');
             $table->bigInteger('stock_id');
             $table->decimal('amount', 11, 2);
+            $table->decimal('roi', 11, 2);
             $table->integer('status')->default(0);
         });
     }

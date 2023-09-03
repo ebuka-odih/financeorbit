@@ -183,7 +183,7 @@
 
                         <li class="header">INVESTING</li>
                         <li>
-                            <a href="transactions-view.html">
+                            <a href="{{ route('user.stocks.index') }}">
                                 <i style="margin-right: 2px;" class="fa fa-trademark "></i>
                                 <span>Stocks</span>
                             </a>
