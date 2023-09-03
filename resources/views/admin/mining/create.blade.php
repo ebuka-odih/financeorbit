@@ -21,6 +21,9 @@
                 <div class="block-header block-header-default">
                     {{--                    <a href="" class="btn btn-secondary">Add Trader</a>--}}
                     <button type="button" class="btn btn-primary push" data-bs-toggle="modal" data-bs-target="#modal-block-normal">Add Mining Plan</button>
+
+                </div>
+                <div class="block-content">
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -35,8 +38,6 @@
                             {{ session()->get('success') }}
                         </div>
                     @endif
-                </div>
-                <div class="block-content">
                     <table class="table table-striped table-vcenter">
                         <thead>
                         <tr>
@@ -114,7 +115,7 @@
                             </button>
                         </div>
                     </div>
-                    <form action="{{ route('admin.copy-traders.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin.mining.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="block-content">
@@ -141,7 +142,7 @@
                                 </div>
                                 <div class="mb-2 col-lg-12">
                                     <label class="form-label" for="example-text-input">Hash Rate</label>
-                                    <input type="text" class="form-control" id="example-text-input" name="lost_trades" >
+                                    <input type="text" class="form-control" id="example-text-input" name="hash_rate" >
                                 </div>
                                 <div class="mb-2 col-lg-12">
                                     <label class="form-label" for="example-text-input">ROI</label>

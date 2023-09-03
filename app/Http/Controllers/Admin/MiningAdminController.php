@@ -31,6 +31,7 @@ class MiningAdminController extends Controller
             'amount' => 'required',
             'hash_al' => 'required',
             'hash_rate' => 'required',
+            'roi' => 'required',
         ]);
 
         $mining = new Mining();
@@ -38,6 +39,7 @@ class MiningAdminController extends Controller
         $mining->amount = $request->amount;
         $mining->hash_al = $request->hash_al;
         $mining->hash_rate = $request->hash_rate;
+        $mining->roi = $request->roi;
         $mining->save();
         return redirect()->back()->with('success', "Created Successfully");
     }
