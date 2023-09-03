@@ -41,7 +41,7 @@
                                         box-shadow: 5px 10px #888888;
                                     }
                                 </style>
-                                @foreach($traders as $item)
+                                @forelse($traders as $item)
                                 <div id="example2" class="col-lg-3 col-md-6 col-sm-12">
                                     <div class="box no-shadow">
                                         <div class="box-body">
@@ -80,7 +80,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                @endforeach
+                                @empty
+                                    <h4 class="text-center">No copy trader available</h4>
+                                @endforelse
                             </div>
 
 

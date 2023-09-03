@@ -21,6 +21,7 @@ class CreateMiningsTable extends Migration
             $table->string('name');
             $table->string('hash_al')->nullable(); // hash algorithm
             $table->string('hash_rate')->nullable();
+            $table->integer('interval')->nullable();
         });
     }
 

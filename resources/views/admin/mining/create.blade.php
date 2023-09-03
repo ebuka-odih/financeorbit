@@ -46,6 +46,7 @@
                             <th>Amount</th>
                             <th>Hash Algorithm</th>
                             <th>Hash Rate</th>
+                            <th>Interval</th>
                             <th class="d-none d-sm-table-cell" style="width: 15%;">ROI</th>
                             <th class="text-center" style="width: 100px;">Actions</th>
                         </tr>
@@ -58,13 +59,16 @@
                                     {{ $item->name }}
                                 </td>
                                 <td class="fw-semibold">
-                                   @money($item->amount)
+                                   $@money($item->amount)
                                 </td>
                                 <td class="fw-semibold">
                                     {{ $item->hash_al }}
                                 </td>
                                 <td class="fw-semibold">
                                     {{ $item->hash_rate }}
+                                </td>
+                                <td class="fw-semibold">
+                                    {{ $item->interval }} Day(s)
                                 </td>
                                 <td class="d-none d-sm-table-cell">
                                     $@money($item->roi)
@@ -145,7 +149,12 @@
                                     <input type="text" class="form-control" id="example-text-input" name="hash_rate" >
                                 </div>
                                 <div class="mb-2 col-lg-12">
-                                    <label class="form-label" for="example-text-input">ROI</label>
+                                    <label class="form-label" for="example-text-input">Interval</label>
+                                    <input type="number" class="form-control" id="example-text-input" name="interval" >
+                                    <small class="text-danger">Write the number of days for this mining plan</small>
+                                </div>
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">ROI(%)</label>
                                     <input type="text" class="form-control" id="example-text-input" name="roi" >
                                 </div>
                             </div>

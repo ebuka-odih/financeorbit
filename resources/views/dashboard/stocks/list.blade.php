@@ -26,7 +26,7 @@
                             <h4 class="mb-0 text-center">All Stocks</h4>
                         <hr>
                     </div>
-                    @foreach($stocks as $item)
+                    @forelse($stocks as $item)
                     <div class="col-lg-4 col-12">
                         <div class="box pull-up">
                             <div class="box-body">
@@ -56,7 +56,9 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach
+                    @empty
+                    <h4 class="text-center">No stocks available</h4>
+                    @endforelse
 
                 </div>
 
