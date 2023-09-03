@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/InvestCopyTradeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/InvestCopyTradeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/copytrades/copied-trades.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/copytrades/copied-trades.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/signals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/signals.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +209,8 @@
       <workItem from="1693511409689" duration="2222000" />
       <workItem from="1693555231966" duration="37000" />
       <workItem from="1693666551658" duration="6677000" />
-      <workItem from="1693725218142" duration="930000" />
+      <workItem from="1693725218142" duration="1525000" />
+      <workItem from="1693728322960" duration="970000" />
     </task>
     <servers />
   </component>

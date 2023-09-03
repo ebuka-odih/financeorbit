@@ -174,7 +174,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="transactions-view.html">
+                            <a href="{{ route('user.signals.index') }}">
                                 <i style="margin-right: 1px;" class="fa fa-signal "></i>
                                 <span>Daily Signal</span>
                             </a>
