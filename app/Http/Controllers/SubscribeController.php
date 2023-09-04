@@ -53,17 +53,12 @@ class SubscribeController extends Controller
         return view('dashboard.subscription.sub-details', compact('user', 'sub'));
     }
 
-
     public function Subsuccess($id)
     {
         return view('dashboard.subscription.success');
     }
 
-    public function history()
-    {
-        $sub = Subscribe::whereUserId(\auth()->id())->get();
-        return view('dashboard.transactions.MyInvestments', compact('sub'));
-    }
+
 
 //    public function Investdetails($id){
 //        $sub = Subscribe::whereUserId(auth()->id())->findOrFail($id);

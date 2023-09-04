@@ -149,11 +149,12 @@
                             </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="auth_login.html"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Trade History</a></li>
-                                <li><a href="{{ route('user.copy-trader.index') }}"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Copied Trades</a></li>
-                                <li><a href="auth_register.html"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Subscribed</a></li>
+                                <li><a href="{{ route('user.tradeHistory') }}"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Trade History</a></li>
+                                <li><a href="{{ route('user.copiedTrades') }}"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Copied Trades</a></li>
+                                <li><a href="{{ route('user.subscribeHistory') }}"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Subscribed</a></li>
                                 <li><a href="auth_register.html"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Staked </a></li>
-                                <li><a href="auth_register.html"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> My Mining </a></li>
+                                <li><a href="auth_register.html"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Scalped History </a></li>
+                                <li><a href="{{ route('user.miningHistory') }}"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> My Mining </a></li>
                                 <li><a href="auth_register.html"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Amazon </a></li>
                             </ul>
                         </li>

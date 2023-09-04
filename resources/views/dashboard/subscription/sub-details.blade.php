@@ -21,11 +21,10 @@
 
             <div class="alert alert-info fade show" role="alert">
                 <center style="color:green;">Bal:	{{ auth()->user()->currency }}@money(auth()->user()->balance)</center>
-
             </div>
 
-            <div class="col-12">
 
+            <div class="col-12">
                 <div class="card">
                     <div class="card-body">
                         <table class="table table-striped" style="width:100%">

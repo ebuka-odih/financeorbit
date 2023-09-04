@@ -73,11 +73,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], fu
 
     Route::get('trade-room', "TradeController@trade")->name('trade');
     Route::post('place/trade-room', "TradeController@placeTrade")->name('placeTrade');
-    Route::get('trade/history', "TradeController@history")->name('trade.history');
     Route::get('close/trade/history', "TradeController@closeTrades")->name('closeTrades');
 
     Route::get('subscription/plans', "SubscribeController@plans")->name('sub.plans');
-    Route::get('myinvestment/history', "SubscribeController@history")->name('sub.history');
     Route::get('subscription/details/{id}', "SubscribeController@details")->name('sub.details');
     Route::post('process/subscription/plans', "SubscribeController@subscribe")->name('subscribe');
     Route::get('investment/details/{id}', "SubscribeController@Investdetails")->name('Investdetails');
@@ -95,6 +93,13 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], fu
 
     Route::get('mining/plans', 'InvestMiningController@plans')->name('mining.plans');
     Route::post('process/miner', 'InvestMiningController@processMiner')->name('processMiner');
+
+//    History Routes
+    Route::get('trade/history', 'HistoryController@tradeHistory')->name('tradeHistory');
+    Route::get('copied-trades/history', 'HistoryController@copiedTrades')->name('copiedTrades');
+    Route::get('subscription/history', 'HistoryController@subscribeHistory')->name('subscribeHistory');
+    Route::get('mining/history', 'HistoryController@miningHistory')->name('miningHistory');
+
 });
 
 include 'admin.php';
