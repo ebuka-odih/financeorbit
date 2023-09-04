@@ -71,7 +71,7 @@
                                     {{ $item->interval }} Day(s)
                                 </td>
                                 <td class="d-none d-sm-table-cell">
-                                    $@money($item->roi)
+                                    {{ $item->roi }}%
                                 </td>
                                 <td class="text-center">
                                     <div class="btn-group">

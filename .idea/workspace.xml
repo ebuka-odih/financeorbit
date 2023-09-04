@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/mining/mining-history.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/mining/mining-plans.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MiningAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MiningAdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_09_03_163657_create_minings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_09_03_163657_create_minings_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/mining/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/mining/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/copy-traders/copy-trade.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/copy-traders/copy-trade.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/stocks/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/stocks/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/subscription/plans.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/subscription/plans.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +213,7 @@
       <workItem from="1693555231966" duration="37000" />
       <workItem from="1693666551658" duration="6677000" />
       <workItem from="1693725218142" duration="1525000" />
-      <workItem from="1693728322960" duration="17198000" />
+      <workItem from="1693728322960" duration="19706000" />
     </task>
     <servers />
   </component>

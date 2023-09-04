@@ -189,7 +189,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="transactions-view.html">
+                            <a href="{{ route('user.mining.plans') }}">
                                 <i style="margin-right: 2px;" class="fa fa-tools "></i>
                                 <span>Mining</span>
                             </a>
