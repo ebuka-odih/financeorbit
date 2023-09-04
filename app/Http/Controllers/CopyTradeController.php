@@ -11,8 +11,8 @@ class CopyTradeController extends Controller
 {
     public function index()
     {
-        $trades = CopyTrade::whereUserId(auth()->id())->get();
-        return view('dashboard.copy-traders.copied-trades', compact('trades'));
+        $copy_trades = CopyTrade::whereUserId(auth()->id())->get();
+        return view('dashboard.copy-traders.copied-trades', compact('copy_trades'));
 
     }
     public function create()
