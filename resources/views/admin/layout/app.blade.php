@@ -126,7 +126,7 @@
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link active" href="{{ route('user.dashboard') }}">
+                        <a class="nav-main-link active" href="{{ route('user.dashboard') }}" target="_blank">
                             <i class="nav-main-link-icon fa fa-users"></i>
                             <span class="nav-main-link-name">Client Dashboard</span>
                         </a>

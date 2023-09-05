@@ -49,7 +49,7 @@
                                                     <th>Miner Details</th>
                                                     <th>Traded</th>
                                                     <th>ROI</th>
-                                                    {{--                                                    <th><i class="fa fa-dot-circle"></i></th>--}}
+                                                    {{--<th><i class="fa fa-dot-circle"></i></th>--}}
                                                 </tr>
                                                 </thead>
                                                 <tbody>

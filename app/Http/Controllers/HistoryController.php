@@ -35,4 +35,10 @@ class HistoryController extends Controller
         return view('dashboard.history.mining-history', compact('mining'));
     }
 
+    public function stakedHistory()
+    {
+        $mining = Subscribe::whereUserId(\auth()->id())->get();
+        return view('dashboard.history.staked-history', compact('mining'));
+    }
+
 }
