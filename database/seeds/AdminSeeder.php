@@ -19,7 +19,7 @@ class AdminSeeder extends Seeder
             DB::table('users')->insert([
                 'firstname' => 'Admin',
                 'lastname' => 'Panel',
-                'status' => 1,
+                'status' => 2,
                 'username' =>'admin',
                 'admin' => 1,
                 'balance' => 500000,

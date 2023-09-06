@@ -139,6 +139,26 @@
                             </a>
                         </li>
 
+                        <li class="nav-item ">
+                            <a class="nav-link with-sub " href="{{ route('user.deposit') }}">
+                                <svg class="sidemenu-icon menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                <span class="sidemenu-label">Deposit</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link with-sub " href="{{ route('user.withdraw') }}">
+                                <svg class="sidemenu-icon menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM184 232H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H184c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/></svg>
+                                <span class="sidemenu-label">Withdrawal</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link with-sub " href="{{ route('user.withdraw') }}">
+                                <i class="sidemenu-icon menu-icon fa fa-money-bill-wave text-white"></i>
+                                <span class="sidemenu-label">Transactions</span>
+                            </a>
+                        </li>
+                        <li class="header">TRADING</li>
+
                         <li class="nav-item  ">
                             <a class="nav-link with-sub" href="{{ route('user.copy-trader.create') }}">
                                 <svg class="sidemenu-icon menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M96 352V96c0-35.3 28.7-64 64-64H416c35.3 0 64 28.7 64 64V293.5c0 17-6.7 33.3-18.7 45.3l-58.5 58.5c-12 12-28.3 18.7-45.3 18.7H160c-35.3 0-64-28.7-64-64zM272 128c-8.8 0-16 7.2-16 16v48H208c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h48v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V256h48c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H320V144c0-8.8-7.2-16-16-16H272zm24 336c13.3 0 24 10.7 24 24s-10.7 24-24 24H136C60.9 512 0 451.1 0 376V152c0-13.3 10.7-24 24-24s24 10.7 24 24l0 224c0 48.6 39.4 88 88 88H296z"/></svg>
@@ -146,25 +166,10 @@
                             </a>
                         </li>
 
-
-                        <li class="nav-item ">
-                            <a class="nav-link with-sub " href="{{ route('user.deposit') }}">
-                                <svg class="sidemenu-icon menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
-                                <span class="sidemenu-label">Deposit</span>
-                            </a>
-                        </li>
-
                         <li class="nav-item ">
                             <a class="nav-link with-sub " href="{{ route('user.signals.index') }}">
                                 <svg class="sidemenu-icon menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
                                 <span class="sidemenu-label">Daily Signals</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item ">
-                            <a class="nav-link with-sub " href="{{ route('user.withdraw') }}">
-                                <svg class="sidemenu-icon menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM184 232H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H184c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/></svg>
-                                <span class="sidemenu-label">Withdrawal</span>
                             </a>
                         </li>
 
@@ -180,13 +185,6 @@
                                 <span class="sidemenu-label">Trades/ROI</span>
                             </a>
                         </li>
-
-                        <!---	<li class="nav-item ">
-                                <a class="nav-link with-sub " href="copy.php">
-                                    <svg class="sidemenu-icon menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M352 128c0 70.7-57.3 128-128 128s-128-57.3-128-128S153.3 0 224 0s128 57.3 128 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/></svg>
-                                    <span class="sidemenu-label">Copy Experts</span>
-                                </a>
-                            </li>---->
 
                         <li class="nav-item ">
                             <a class="nav-link with-sub " href="{{ route('user.buy') }}">
@@ -209,17 +207,18 @@
                         </li>
 
                         <li class="nav-item ">
+                            @if(auth()->user()->status < 2)
                             <a class="nav-link with-sub " href="{{ route('user.verify') }}">
                                 <svg class="sidemenu-icon menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
                                 <span class="sidemenu-label">Verify Account</span>
                             </a>
+                            @else
+                                <a class="nav-link with-sub " >
+                                <i style="font-size: 20px" class="fa fa-check-circle sidemenu-icon menu-icon text-success"></i>
+                                <span class="sidemenu-label">Verified</span>
+                                </a>
+                            @endif
                         </li>
-                        <!----	<li id="foot" class="nav-item card custom-card card-body">
-                                    <a href="#" class="d-flex align-items-center text-white text-decoration-none">
-                                        <img src="https://github.com/mdo.png" alt="hugenerd" width="50" height="50" class="sidemenu-icon menu-icon rounded-circle">
-                                        &nbsp; &nbsp;<span class="sidemenu-label">Pongdev Inc Starter Account</span>
-                                    </a>
-                            </li>--->
                         <li id="foots" class="nav-item">
                             <a class="nav-link with-sub" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
