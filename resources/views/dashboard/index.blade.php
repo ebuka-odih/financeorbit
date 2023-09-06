@@ -33,7 +33,9 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-4 col-xxl-4">
+
+
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-12">
                             <div class="card custom-card">
                                 <div class="card-body">
                                     <div class="transaction">
@@ -43,54 +45,8 @@
                                             </div>
                                             <div class="transaction-details d-flex">
                                                 <div>
-                                                    <span class="text-dark tx-bold-12"> Total Profit</span>
-                                                    <h5 class="text-muted tx-bold-12" id="profit">{{ auth()->user()->currency }}@money(auth()->user()->profit)</h5></div>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-4 col-xxl-4">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                    <div class="transaction">
-                                        <div class="transaction-blog">
-                                            <div class="">
-                                                <svg class="wd-30 ht-40 me-3 my-auto" fill="#01b8ff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M96 352V96c0-35.3 28.7-64 64-64H416c35.3 0 64 28.7 64 64V293.5c0 17-6.7 33.3-18.7 45.3l-58.5 58.5c-12 12-28.3 18.7-45.3 18.7H160c-35.3 0-64-28.7-64-64zM272 128c-8.8 0-16 7.2-16 16v48H208c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h48v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V256h48c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H320V144c0-8.8-7.2-16-16-16H272zm24 336c13.3 0 24 10.7 24 24s-10.7 24-24 24H136C60.9 512 0 451.1 0 376V152c0-13.3 10.7-24 24-24s24 10.7 24 24l0 224c0 48.6 39.4 88 88 88H296z"/></svg>
-                                            </div>
-                                            <div class="transaction-details d-flex">
-                                                <div>
-                                                    <span class="text-dark tx-bold-12"> Total Bonus</span>
-                                                    <h5 class="text-muted tx-bold-12" id="bonus"> {{ auth()->user()->currency }}@money(auth()->user()->ref_bonus)</h5></div>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                    <div class="transaction">
-                                        <div class="transaction-blog">
-                                            <div class="">
-                                                <svg class="wd-30 ht-40 me-3 my-auto" fill="#01b8ff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M96 352V96c0-35.3 28.7-64 64-64H416c35.3 0 64 28.7 64 64V293.5c0 17-6.7 33.3-18.7 45.3l-58.5 58.5c-12 12-28.3 18.7-45.3 18.7H160c-35.3 0-64-28.7-64-64zM272 128c-8.8 0-16 7.2-16 16v48H208c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h48v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V256h48c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H320V144c0-8.8-7.2-16-16-16H272zm24 336c13.3 0 24 10.7 24 24s-10.7 24-24 24H136C60.9 512 0 451.1 0 376V152c0-13.3 10.7-24 24-24s24 10.7 24 24l0 224c0 48.6 39.4 88 88 88H296z"/></svg>
-                                            </div>
-                                            <div class="transaction-details d-flex">
-                                                <div>
-                                                    <span class="text-dark tx-bold-12"> Total Invested</span>
-                                                    <h5 class="text-muted tx-bold-12" id="deposit"> {{ auth()->user()->currency }} @money(auth()->user()->invested)</h5></div>
+                                                    <span class="text-dark tx-bold-12"> Trading Progress</span>
+                                                    <h5 class="text-muted tx-bold-12" id="deposit"> 0</h5></div>
 
                                             </div>
 
