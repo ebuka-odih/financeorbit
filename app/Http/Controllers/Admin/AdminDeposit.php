@@ -17,7 +17,7 @@ class AdminDeposit extends Controller
     {
         $deposits = Deposit::all();
         $wallets = PaymentMethod::all();
-        $users = User::where('admin', 1)->get();
+        $users = User::where('admin', 0)->get();
         return view('admin.transactions.deposits', compact('deposits', 'wallets', 'users'));
     }
 
