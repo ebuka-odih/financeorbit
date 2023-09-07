@@ -19,9 +19,9 @@ class UserSeeder extends Seeder
             DB::table('users')->insert([
                 'firstname' => 'User',
                 'lastname' => 'Panel',
-                'status' => 2,
-                'username' =>'admin',
-                'admin' => 1,
+                'status' => 1,
+                'username' =>'user',
+                'admin' => 0,
                 'balance' => 500000,
                 'profit' => 600000,
                 'currency' => "$",

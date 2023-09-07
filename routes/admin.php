@@ -26,6 +26,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::get('view/deposits/{id}', "Admin\AdminDeposit@view_deposit")->name('view_deposit');
     Route::get('approve/deposit/{id}', "Admin\AdminDeposit@approve_deposit")->name('approve_deposit');
     Route::delete('delete/deposit/{id}', "Admin\AdminDeposit@deleteDeposit")->name('deleteDeposit');
+    Route::post('admin/deposit', "Admin\AdminDeposit@adminDeposit")->name('adminDeposit');
 
     // Withdrawal Route
     Route::get('withdrawals', "Admin\AdminWithdraw@withdrawal")->name('withdrawal');
@@ -40,7 +41,10 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     // Funding Route
     Route::get('fund/user', "Admin\FundingController@fund")->name('fund');
     Route::post('fund/user', "Admin\FundingController@sendFund")->name('sendFund');
-    Route::post('admin/deposit', "Admin\AdminDeposit@adminDeposit")->name('adminDeposit');
+
+    Route::get('defund/user', "Admin\AdminDefundController@debit")->name('debit');
+    Route::post('defund/user', "Admin\AdminDefundController@sendDefund")->name('sendDefund');
+
 
     Route::resource('wallet', "Admin\PaymentMethodController");
     Route::resource('copy-traders', "Admin\AdminCopyTraderController");

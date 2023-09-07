@@ -130,52 +130,21 @@
                 <br>
                 <img height="200" width="200" src="{{ asset('files/'.$user->id_image) }}" alt="">
                 <br>
-            <hr>
-                <form action="{{ route('admin.defundBal') }}" method="POST">
+                <hr>
+                <br>
+                <form action="{{ route('admin.editDate') }}" method="POST">
                     @csrf
                     <input type="hidden" value="{{ $user->id }}" name="user_id">
 
                     <div class="row">
                         <div class="col-lg-6">
-                            <input type="number" name="amount" class="form-control" >
-                            <p>Bal: {{ $user->balance }}</p>
+                            <input type="date" name="created_at" class="form-control" value="{{ old('created_at', optional($user)->created_at) }}">
                         </div>
                         <div class="col-lg-6">
-                            <button class="btn btn-primary">Defund Balance</button>
+                            <button class="btn btn-primary">Change Date</button>
                         </div>
                     </div>
                 </form>
-                <hr>
-                <br>
-                <form action="{{ route('admin.defundProfit') }}" method="POST">
-                    @csrf
-                    <input type="hidden" value="{{ $user->id }}" name="user_id">
-
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <input type="number" name="amount" class="form-control" >
-                            <p>Profit: {{ $user->profit }}</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <button class="btn btn-primary">Defund Profit</button>
-                        </div>
-                    </div>
-                </form>
-                <hr>
-                <br>
-            <form action="{{ route('admin.editDate') }}" method="POST">
-                @csrf
-                <input type="hidden" value="{{ $user->id }}" name="user_id">
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <input type="date" name="created_at" class="form-control" value="{{ old('created_at', optional($user)->created_at) }}">
-                    </div>
-                    <div class="col-lg-6">
-                        <button class="btn btn-primary">Change Date</button>
-                    </div>
-                </div>
-            </form>
 
             <!-- END Latest Friends -->
 

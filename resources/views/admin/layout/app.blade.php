@@ -325,7 +325,7 @@
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link nav-main"  href="{{ route('admin.fund') }}">
+                        <a class="nav-main-link nav-main"  href="{{ route('admin.debit') }}">
                             <i class="nav-main-link-icon fa fa-minus-circle"></i>
                             <span class="nav-main-link-name">Remove Fund</span>
                         </a>
