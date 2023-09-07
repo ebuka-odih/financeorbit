@@ -17,8 +17,7 @@ class FundingController extends Controller
     {
         $users = User::where('admin', 0)->get();
         $funds = Funding::all();
-        $wallets = PaymentMethod::all();
-        return view('admin.user.add-fund', compact('users', 'funds', 'wallets'));
+        return view('admin.user.add-fund', compact('users', 'funds'));
     }
     public function sendFund(Request $request)
     {

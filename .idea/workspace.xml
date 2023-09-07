@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FundingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FundingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/signal/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/signal/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/add-fund.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/add-fund.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/deposit/deposit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/deposit/deposit.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +193,7 @@
       <workItem from="1693013446966" duration="13879000" />
       <workItem from="1693082341971" duration="4848000" />
       <workItem from="1693172460168" duration="4160000" />
-      <workItem from="1694017191414" duration="12088000" />
+      <workItem from="1694017191414" duration="12508000" />
     </task>
     <servers />
   </component>

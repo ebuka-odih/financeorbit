@@ -37,6 +37,16 @@
                                             </div>
                                         </div>
                                         <div class="block-content">
+                                            <button type="button" class="btn btn-primary push" data-bs-toggle="modal" data-bs-target="#modal-block-normal">Add Deposit</button>
+                                            <div class="col-12">
+                                                <div class="alert alert-info">
+                                                    To add deposit to users <br>
+                                                    Note:
+                                                    <p>Select User, select wallet and add the amount to deposit</p>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <hr>
                                             @if(session()->has('success'))
                                                 <div class="alert alert-success">
                                                     {{ session()->get('success') }}
@@ -144,6 +154,62 @@
                         <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Done</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-block-normal" tabindex="-1" aria-labelledby="modal-block-normal" aria-hidden="true"  role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="block block-rounded block-themed block-transparent mb-0">
+                    <div class="block-header bg-primary-dark">
+                        <h3 class="block-title">Add Deposit</h3>
+                        <div class="block-options">
+                            <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa fa-fw fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <form action="{{ route('admin.adminDeposit') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+
+                        <div class="block-content">
+
+                            <div class="row">
+
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">User</label>
+                                    <select name="user_id" id="" class="form-control" required="">
+                                        <option >Select User...</option>
+                                        @foreach($users as $item)
+                                            <option value="{{ $item->id }}">{{ $item->fullname() }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Crypto Wallet</label>
+                                    <select class="form-control text-primary" name="payment_method_id" id="cmethod" required="">
+                                        <option >Select Wallet...</option>
+                                        @foreach($wallets as $item)
+                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Amount</label>
+                                    <input type="text" class="form-control" id="example-text-input" name="amount" >
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="block-content block-content-full text-end bg-body">
+                            <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Submit</button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </div>

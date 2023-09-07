@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Deposit;
 use App\Http\Controllers\Controller;
 use App\Mail\ApproveDeposit;
+use App\PaymentMethod;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -14,7 +16,9 @@ class AdminDeposit extends Controller
     public function deposits()
     {
         $deposits = Deposit::all();
-        return view('admin.transactions.deposits', compact('deposits'));
+        $wallets = PaymentMethod::all();
+        $users = User::where('admin', 1)->get();
+        return view('admin.transactions.deposits', compact('deposits', 'wallets', 'users'));
     }
 
     public function view_deposit($id)
