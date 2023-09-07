@@ -91,7 +91,7 @@
                             <img src="img/in-wave-icon-3.svg" alt="wave-icon" width="48">
                         </div>
                         <div class="uk-width-expand">
-                            <p>Low minimum<br>deposit of $100</p>
+                            <p>Low minimum<br>deposit of $500</p>
                         </div>
                     </div>
                 </div>

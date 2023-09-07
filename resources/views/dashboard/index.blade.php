@@ -337,7 +337,9 @@
                                     </div>
                                 @endif
 
+
                                 <div class="row row-sm mg-b-20 mb-2">
+
                                     <div class="d-flex">
                                         <span class="text-dark tx-semibold">
 
@@ -482,7 +484,6 @@
                                         </div>
                                         <div class="d-flex">
                                             <span class="text-dark tx-semibold">Balance ~ <font color="teal">{{ auth()->user()->currency }} @money(auth()->user()->balance)</font></span>
-
 
                                         </div>
                                     </div>
