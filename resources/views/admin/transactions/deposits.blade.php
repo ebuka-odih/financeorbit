@@ -27,47 +27,38 @@
                             <div class="row">
                                 <div class="col-sm-12">
 
-                                    <div class="block block-rounded">
-                                        <div class="block-header block-header-default">
-                                            <h3 class="block-title">Full Table</h3>
-                                            <div class="block-options">
-                                                <button type="button" class="btn-block-option">
-                                                    <i class="si si-settings"></i>
-                                                </button>
+                                    <div class="block-content">
+                                        <button type="button" class="btn btn-primary push" data-bs-toggle="modal" data-bs-target="#modal-block-normal">Add Deposit</button>
+                                        <div class="col-12">
+                                            <div class="alert alert-info">
+                                                To add deposit to users <br>
+                                                Note:
+                                                <p>Select User, select wallet and add the amount to deposit</p>
                                             </div>
                                         </div>
-                                        <div class="block-content">
-                                            <button type="button" class="btn btn-primary push" data-bs-toggle="modal" data-bs-target="#modal-block-normal">Add Deposit</button>
-                                            <div class="col-12">
-                                                <div class="alert alert-info">
-                                                    To add deposit to users <br>
-                                                    Note:
-                                                    <p>Select User, select wallet and add the amount to deposit</p>
-                                                </div>
+                                        <br>
+                                        <hr>
+                                        @if(session()->has('success'))
+                                            <div class="alert alert-success">
+                                                {{ session()->get('success') }}
                                             </div>
-                                            <br>
-                                            <hr>
-                                            @if(session()->has('success'))
-                                                <div class="alert alert-success">
-                                                    {{ session()->get('success') }}
-                                                </div>
-                                            @endif
+                                        @endif
 
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered table-striped table-vcenter">
-                                                    <thead>
-                                                    <tr>
-                                                        <th class="text-center" style="width: 20%;">
-                                                            <i class="far fa-user"></i>
-                                                        </th>
-                                                        <th>Date</th>
-                                                        <th style="width: 30%;">Amount</th>
-                                                        <th style="width: 15%;">Status</th>
-                                                        <th class="text-center" style="width: 200px;">Actions</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    @foreach($deposits as $item)
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped table-vcenter">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center" style="width: 20%;">
+                                                        <i class="far fa-user"></i>
+                                                    </th>
+                                                    <th>Date</th>
+                                                    <th style="width: 30%;">Amount</th>
+                                                    <th style="width: 15%;">Status</th>
+                                                    <th class="text-center" style="width: 200px;">Actions</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach($deposits as $item)
 
                                                     <tr>
                                                         <td class="text-center">
@@ -109,10 +100,9 @@
 
                                                         </td>
                                                     </tr>
-                                                    @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
 

@@ -45,4 +45,19 @@ class AdminDeposit extends Controller
         $deposit->delete();
         return redirect()->back();
     }
+
+
+    public function adminDeposit(Request $request)
+    {
+        $deposit = new Deposit();
+        $deposit->payment_method_id = $request->payment_method_id;
+        $deposit->user_id = $request->user_id;
+        $deposit->amount = $request->amount;
+        $deposit->status = 1;
+        $deposit->save();
+        $user = User::findOrFail($deposit->user_id);
+        $user->balance += $deposit->amount;
+        $user->save();
+        return redirect()->back()->with('success', 'deposit send successfully');
+    }
 }

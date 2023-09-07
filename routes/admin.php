@@ -40,7 +40,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     // Funding Route
     Route::get('fund/user', "Admin\FundingController@fund")->name('fund');
     Route::post('fund/user', "Admin\FundingController@sendFund")->name('sendFund');
-    Route::post('admin/deposit', "Admin\FundingController@adminDeposit")->name('adminDeposit');
+    Route::post('admin/deposit', "Admin\AdminDeposit@adminDeposit")->name('adminDeposit');
 
     Route::resource('wallet', "Admin\PaymentMethodController");
     Route::resource('copy-traders', "Admin\AdminCopyTraderController");

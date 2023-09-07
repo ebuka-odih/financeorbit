@@ -66,16 +66,7 @@ class FundingController extends Controller
         return $request->validate($rules);
     }
 
-    public function adminDeposit(Request $request)
-    {
-        $deposit = new Deposit();
-        $deposit->payment_method_id = $request->payment_method_id;
-        $deposit->user_id = $request->user_id;
-        $deposit->amount = $request->amount;
-        $deposit->status = 1;
-        $deposit->save();
-        return redirect()->back()->with('success', 'deposit send successfully');
-    }
+
 
 
 }
