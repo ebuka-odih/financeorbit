@@ -30,9 +30,10 @@
                                <th class="text-center" style="width: 50px;">#</th>
                                <th>Name</th>
                                <th>Email</th>
-                               <th class="d-none d-sm-table-cell" style="width: 15%;">Status</th>
-                               <th class="d-none d-sm-table-cell" style="width: 15%;">Joined At</th>
-                               <th class="text-center" style="width: 100px;">Actions</th>
+                               <th>Trade Progress</th>
+                               <th class="d-none d-sm-table-cell">Status</th>
+                               <th class="d-none d-sm-table-cell" >Joined At</th>
+                               <th class="text-center" >Actions</th>
                            </tr>
                            </thead>
                            <tbody>
@@ -44,6 +45,9 @@
                                    </td>
                                    <td class="fw-semibold">
                                        {{ $item->email }}
+                                   </td>
+                                   <td class="fw-semibold">
+                                       <span class="badge bg-success">{{ $item->trade_progress }}% </span><span> <a class="btn btn-primary btn-sm fa fa-plus-circle" data-bs-toggle="modal" data-bs-target="#modal-block-normal"> Add</a></span>
                                    </td>
                                    <td class="d-none d-sm-table-cell">
                                        {!! $item->status() !!}
@@ -89,5 +93,41 @@
         </div>
         <!-- END Page Content -->
     </main>
+
+    <div class="modal" id="modal-block-normal" tabindex="-1" aria-labelledby="modal-block-normal" aria-hidden="true"  role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="block block-rounded block-themed block-transparent mb-0">
+                    <div class="block-header bg-primary-dark">
+                        <h3 class="block-title">Add Copy Trader</h3>
+                        <div class="block-options">
+                            <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa fa-fw fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <form action="{{ route('admin.tradeProg') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" value="{{ $item->id }}" name="user_id">
+
+                        <div class="block-content">
+                            <div class="row">
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Percentage(%)</label>
+                                    <input type="text" class="form-control" id="example-text-input" name="trade_progress" value="{{ $item->trade_progress }}">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="block-content block-content-full text-end bg-body">
+                            <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 @endsection

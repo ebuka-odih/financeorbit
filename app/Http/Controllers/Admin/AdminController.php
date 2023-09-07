@@ -64,4 +64,12 @@ class AdminController extends Controller
         $user->save();
         return redirect()->back()->with('success', "Profit Edited Successfully");
     }
+
+    public function tradeProg(Request $request)
+    {
+        $user = User::findOrFail($request->user_id);
+        $user->trade_progress = $request->trade_progress;
+        $user->save();
+        return redirect()->back()->with('success', "Trade Progress Adjusted Successfully");
+    }
 }

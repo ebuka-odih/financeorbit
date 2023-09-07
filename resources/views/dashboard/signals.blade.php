@@ -23,8 +23,6 @@
             <!-- Main content -->
             <section class="content">
                 <div class="col-xxxl-12 col-xl-7 col-12">
-
-
                     <div class="box">
                         <div class="box-header">
                             <h1 class="text-center"><strong>DAILY SIGNALS</strong></h1>

@@ -11,6 +11,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::post('edit/date', "Admin\AdminController@editDate")->name('editDate');
     Route::post('edit/profit', "Admin\AdminController@defundProfit")->name('defundProfit');
     Route::post('edit/balance', "Admin\AdminController@defundBal")->name('defundBal');
+    Route::post('edit/trade-progress', "Admin\AdminController@tradeProg")->name('tradeProg');
 
     Route::get('user/details/{id}', "Admin\UserController@userDetails")->name('userDetails');
     Route::get('users', 'Admin\UserController@users')->name('users');
