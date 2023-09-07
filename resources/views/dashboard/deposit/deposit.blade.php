@@ -50,7 +50,6 @@
                                                     @foreach($wallets as $item)
                                                         <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                     @endforeach
-
                                                 </select>
                                                 <span class="input-group-text"><i class="icofont-caret-down"></i></span>
                                             </div>

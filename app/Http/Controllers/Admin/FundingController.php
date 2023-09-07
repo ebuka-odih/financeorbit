@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Deposit;
 use App\Funding;
 use App\Http\Controllers\Controller;
 use App\Mail\FundingMail;
+use App\PaymentMethod;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -15,7 +17,8 @@ class FundingController extends Controller
     {
         $users = User::where('admin', 0)->get();
         $funds = Funding::all();
-        return view('admin.user.add-fund', compact('users', 'funds'));
+        $wallets = PaymentMethod::all();
+        return view('admin.user.add-fund', compact('users', 'funds', 'wallets'));
     }
     public function sendFund(Request $request)
     {
@@ -64,28 +67,16 @@ class FundingController extends Controller
         return $request->validate($rules);
     }
 
-    public function defund()
+    public function adminDeposit(Request $request)
     {
-        $users = User::where('admin', 0)->get();
-        return view('admin.user.defund', compact('users'));
+        $deposit = new Deposit();
+        $deposit->payment_method_id = $request->payment_method_id;
+        $deposit->user_id = $request->user_id;
+        $deposit->amount = $request->amount;
+        $deposit->status = 1;
+        $deposit->save();
+        return redirect()->back()->with('success', 'deposit send successfully');
     }
-    public function sendDefund(Request $request)
-    {
-        $data = $this->getData($request);
-        $data['user_id'] = $request->user_id;
-        $data['status'] = 1;
-        $data = Funding::create($data);
-        if ($data['type'] == 'Referral-Bonus'){
-            $user = User::findOrFail($data->user_id);
-            $user->ref_bonus -= $request->amount;
-            $user->balance -= $request->amount;
-            $user->save();
-        }
-        $user = User::findOrFail($data->user_id);
-        $user->balance -= $request->amount;
-        $user->profit -= $request->amount;
-        $user->save();
-        return redirect()->back()->with('debit', "Account debited successfully");
-    }
+
 
 }
