@@ -15,13 +15,20 @@ class Funding extends Model
 
     public function fund_type()
     {
-        if ($this->type == "Loss")
+        if ($this->type == "Invested")
         {
-            return "Loss";
-        }elseif ($this->type == "Referral-Bonus" || $this->type == "Bonus"){
+            return "Invested";
+        }
+        elseif ($this->type == "Balance"){
+            return "Balance";
+        }
+        elseif ($this->type == "Profit"){
+            return "Balance";
+        }
+        elseif ($this->type == "Bonus"){
             return "Bonus";
         }
-        return "Profit";
+        return 'null';
     }
 
     public function status()

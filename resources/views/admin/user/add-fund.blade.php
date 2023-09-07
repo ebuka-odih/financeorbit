@@ -18,32 +18,7 @@
 
         <!-- Page Content -->
         <div class="content">
-            <div class="row">
-                <div class="col-lg-6">
-                    <!-- Block Tabs Animated Fade -->
-                    <div class="block block-rounded">
-                        <ul class="nav nav-tabs nav-tabs-block" role="tablist">
-                            <li class="nav-item">
-                                <a href="" class="nav-link active" id="btabs-animated-fade-home-tab" data-bs-toggle="tab" data-bs-target="#btabs-animated-fade-home" role="tab" aria-controls="btabs-animated-fade-home" aria-selected="true">Add Bank Payment Method</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- END Block Tabs Animated Fade -->
-                </div>
 
-                <div class="col-lg-6">
-                    <!-- Block Tabs Animated Fade -->
-                    <div class="block block-rounded">
-                        <ul class="nav nav-tabs nav-tabs-block" role="tablist">
-                            <li class="nav-item">
-                                <a href="" class="nav-link" id="btabs-animated-fade-profile-tab" data-bs-toggle="tab" data-bs-target="#btabs-animated-fade-profile" role="tab" aria-controls="btabs-animated-fade-profile" aria-selected="false">Add Crypto Payment Method</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- END Block Tabs Animated Fade -->
-                </div>
-
-            </div>
             <!-- Elements -->
             <div class="block block-rounded">
                 <div class="block-content">
@@ -68,7 +43,7 @@
                             <div class="col-lg-6 col-xl-12">
                                 <div class="mb-4">
                                     <label class="form-label" for="example-text-input">User</label>
-                                    <select name="user_id" id="" class="form-control">
+                                    <select name="user_id" id="" class="form-control" required="">
                                         @foreach($users as $item)
                                             <option value="{{ $item->id }}">{{ $item->fullname() }}</option>
                                         @endforeach
@@ -81,17 +56,17 @@
                                     <label class="form-label"  for="example-email-input">Type of Fund</label>
                                     <select name="type" id="" class="form-control ">
                                         <option disabled selected>Select </option>
+                                        <option value="Balance">Main Balance</option>
+                                        <option value="Invested">Invested Balance</option>
                                         <option value="Bonus">Bonus</option>
                                         <option value="Profit">Profit</option>
-                                        <option value="Referral-Bonus">Referral Bonus</option>
-                                        <option value="Loss">Loss</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xl-6">
                                 <div class="mb-4">
                                     <label class="form-label" for="example-email-input">Amount</label>
-                                    <input type="text" class="form-control" id="example-email-input" name="amount" >
+                                    <input type="number" class="form-control" id="example-email-input" name="amount" >
                                 </div>
                             </div>
 
@@ -105,6 +80,34 @@
 
 
                     </form>
+                </div>
+                <hr>
+                <br>
+                <div class="block-content">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>User</th>
+                                <th>Fund Type</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($funds as $item)
+                                <tr>
+                                    <td>{{ date('d M, Y', strtotime($item->created_at)) }}</td>
+                                    <td>{{ $item->user->fullname() }}</td>
+                                    <td>{{ $item->fund_type() }}</td>
+                                    <td>$@money($item->amount)</td>
+                                    <td>{!! $item->status() !!}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- END Elements -->
