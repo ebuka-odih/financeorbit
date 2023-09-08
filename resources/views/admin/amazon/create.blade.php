@@ -56,7 +56,7 @@
                             <tr>
                                 <th class="text-center" scope="row">{{ $index + 1 }}</th>
                                 <td class="fw-semibold">
-                                    {{ $item->type }}
+                                    <img height="80" width="80" src="{{ asset('files/'.$item->image) }}" alt="">
                                 </td>
                                 <td class="fw-semibold">
                                     {{ $item->name }}
@@ -117,7 +117,7 @@
                             </button>
                         </div>
                     </div>
-                    <form action="{{ route('admin.signal.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin.amazon.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="block-content">
