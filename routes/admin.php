@@ -35,10 +35,6 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::get('approve/withdrawal/{id}', "Admin\AdminWithdraw@approve_withdrawal")->name('approve_withdrawal');
     Route::delete('delete/withdrawal/{id}', "Admin\AdminWithdraw@delete_withdrawal")->name('delete_withdrawal');
 
-    Route::resource('subscription', "Admin\SubscriptionController");
-    Route::resource('collectable', "Admin\AdminCollectable");
-    Route::resource('nftlisting', "Admin\AdminNFTListing");
-
     // Funding Route
     Route::get('fund/user', "Admin\FundingController@fund")->name('fund');
     Route::post('fund/user', "Admin\FundingController@sendFund")->name('sendFund');
@@ -53,6 +49,8 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::resource('staking', "Admin\AdminStakingController");
     Route::resource('stocks', "Admin\StocksAdminController");
     Route::resource('mining', "Admin\MiningAdminController");
+    Route::resource('subscription', "Admin\SubscriptionController");
+    Route::resource('amazon', "Admin\AmazonAdminController");
 
     //Trades Routes
     Route::get('open/trades/history', "Admin\AdminTradesController@openTrades")->name('trades.open');

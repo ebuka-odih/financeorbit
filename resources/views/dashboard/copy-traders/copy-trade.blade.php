@@ -26,7 +26,6 @@
 
                     <div class="box">
                         <div class="box-body">
-                            <p>Get More Expert Traders and Earn More Profits <a href="account_upgrade.php">GO PRO</a> </p>
 
                             <div class="alert alert-info fade show" role="alert">
                                 <center style="color:;">MINIMAL COPY TRADE AMOUNT: {{ auth()->user()->currency }} 500.00</center>

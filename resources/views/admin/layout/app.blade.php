@@ -298,7 +298,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.copy-traders.index') }}">
+                                <a class="nav-main-link" href="{{ route('admin.amazon.create') }}">
                                     <span class="nav-main-link-name">Add Books</span>
                                 </a>
                             </li>
