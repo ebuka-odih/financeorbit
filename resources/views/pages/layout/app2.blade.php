@@ -49,7 +49,7 @@
 
 
     </style>
-    <script src="//code.jivosite.com/widget/40ne8liNIx" async></script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="d3f0b1a5-c917-4245-8ce5-41e2ba1f64f7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 </head>
 
