@@ -170,7 +170,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-20 mb-5">
-                                    <h3 class="my-0 fw-600"><span class="text-primary">@money($last_deposit)</span> USD</h3>
+                                    <h3 class="my-0 fw-600"><span class="text-primary">0.00</span> USD</h3>
                                 </div>
                             </div>
 
