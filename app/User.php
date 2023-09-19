@@ -114,6 +114,10 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(CopyTrade::class, 'user_id');
     }
+    public function staked()
+    {
+        return $this->hasMany(Staked::class, 'user_id');
+    }
 
     public function getProfilePicAttribute($value) {
         if(!$this->attributes['avatar']) {

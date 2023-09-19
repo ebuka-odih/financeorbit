@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/staking/details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminStakingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminStakingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StakedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StakedController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/InvestMining.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/InvestMining.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/InvestStaking.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Staked.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Staked.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Staking.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Staking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_26_013028_create_invest_stakings_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/staking/staked.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/staking/staked.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/personal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/personal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/staking/plans.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/staking/plans.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,6 +217,8 @@
       <workItem from="1694149582626" duration="3685000" />
       <workItem from="1694218734171" duration="839000" />
       <workItem from="1694979830091" duration="239000" />
+      <workItem from="1695076567245" duration="1329000" />
+      <workItem from="1695086747763" duration="7735000" />
     </task>
     <servers />
   </component>
@@ -230,7 +246,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php</url>
-          <line>12</line>
+          <line>10</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

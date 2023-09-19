@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\InvestStaking;
+use App\Staked;
 use App\Staking;
 use Illuminate\Http\Request;
 
@@ -10,7 +12,8 @@ class AdminStakingController extends Controller
 {
     public function index()
     {
-
+        $staked = Staked::all();
+        return view('admin.staking.staked', compact('staked'));
     }
 
     public function create()

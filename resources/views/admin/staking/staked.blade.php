@@ -53,33 +53,48 @@
                                                     <th class="sorting"  tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending">Amount</th>
                                                     <th class="sorting"  tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Access: activate to sort column ascending">ROI</th>
                                                     <th class="sorting"  tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Access: activate to sort column ascending">Status</th>
-                                                    <th class="sorting"  tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Access: activate to sort column ascending">Trade Details</th>
+                                                    <th class="sorting"  tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Access: activate to sort column ascending">Staking Details</th>
                                                     <th  class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Registered: activate to sort column ascending">Action</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                @foreach($trades as $index => $item)
+                                                @foreach($staked as $index => $item)
                                                     <tr class="odd">
                                                         <td class="text-center sorting_1">{{ $index + 1 }}</td>
                                                         <td class="fw-semibold">
-                                                            <a href="{{ route('admin.userDetails', $item->id) }}">{{ $item->user->name }}</a>
+                                                            <a href="{{ route('admin.userDetails', $item->id) }}">{{ $item->user->fullname() }}</a>
                                                         </td>
                                                         <td class="fw-semibold">
                                                             $@money($item->amount)
                                                         </td>
                                                         <td class="fw-semibold">
-                                                            $@money($item->roi)({{ $item->roi_pec }}%)
+                                                            $@money($item->roi)
                                                         </td>
                                                         <td class="fw-semibold">
-                                                            {!! $item->status() !!}
+                                                            {!! $item->adminStatus() !!}
                                                         </td>
                                                         <td class="d-none d-sm-table-cell">
-                                                            <span>{{ $item->copytrade->name }}</span>
-                                                            <span>{{ $item->copytrade->won_trades }}</span>
-                                                            <span>{{ $item->copytrade->lost_trades }}</span>
+                                                            <span>{{ $item->staking->name }}</span>
+                                                            <span>({{ $item->staking->token }})</span>
                                                         </td>
                                                         <td>
-                                                            <a href=""><li class="fa fa-pencil"></li></a>
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <a href=""><i class="fa fa-eye"></i></a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <form method="POST" action="{!! route('admin.deleteUser', $item->id) !!}" accept-charset="UTF-8">
+                                                                        <input name="_method" value="DELETE" type="hidden">
+                                                                        {{ csrf_field() }}
+
+                                                                        <div class="btn-group btn-group-xs pull-right" role="group">
+                                                                            <button type="submit" class="btn btn-sm btn-danger js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" onclick="return confirm(&quot;Delete Package?&quot;)">
+                                                                                <i class="fa fa-times"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                 @endforeach

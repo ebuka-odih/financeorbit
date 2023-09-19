@@ -85,6 +85,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], fu
     Route::resource('copy-trader', "CopyTradeController");
     Route::resource('signals', "SignalController");
     Route::resource('stocks', "StockController");
+    Route::resource('staked', "StakedController");
 //    Route::resource('mining', "MiningAdminController");
 
     Route::get('buy', "UserController@buy")->name('buy');

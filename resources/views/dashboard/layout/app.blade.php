@@ -1,8 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from master-admin-template.multipurposethemes.com/bs5/crypto-dark/wallets.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Aug 2023 05:07:16 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,7 +43,7 @@
             <div class="app-menu">
                 <ul class="header-megamenu nav">
                     <li class="btn-group nav-item">
-                        <a href="#" class="waves-effect waves-light nav-link push-btn btn-outline no-border" data-toggle="push-menu" role="button">
+                        <a href="{{ route('index') }}" class="waves-effect waves-light nav-link push-btn btn-outline no-border" data-toggle="push-menu" role="button">
                             <img src="https://master-admin-template.multipurposethemes.com/bs5/images/svg-icon/collapse.svg" class="img-fluid svg-icon" alt="">
                         </a>
                     </li>
@@ -70,7 +68,7 @@
                         <ul class="dropdown-menu animated flipInX">
                             <li class="user-body">
                                 <a class="dropdown-item" href="{{ route('user.profile') }}"><i class="ti-user text-muted me-2"></i> Profile</a>
-                                <a class="dropdown-item" href="#"><i class="fa fa-wallet text-muted me-2"></i> My Wallet</a>
+                                <a class="dropdown-item" href="{{ route('user.wallet') }}"><i class="fa fa-wallet text-muted me-2"></i> My Wallet</a>
                                 <a class="dropdown-item" href="#"><i class="fa fa-tools text-muted me-2"></i> Settings</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -198,7 +196,7 @@
                         </li>
 
                         <li>
-                            <a href="exchange-buy-sell.html">
+                            <a href="{{ route('user.staked.create') }}">
                                 <i style="margin-right: 2px;" class="fa fa-anchor "></i>
                                 <span>Staking</span>
                             </a>

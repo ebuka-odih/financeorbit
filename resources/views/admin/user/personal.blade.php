@@ -16,7 +16,7 @@
                         <a class="img-link" >
                             <img class="img-avatar img-avatar96 img-avatar-thumb" src="{{ asset('admin/assets/media/avatars/avatar10.jpg') }}" alt="">
                         </a>
-                        <h1 class="fw-bold my-2 text-white">{{ $user->name }}</h1>
+                        <h1 class="fw-bold my-2 text-white">{{ $user->fullname() }}</h1>
                         <h2 class="h4 fw-bold text-white-75">
                             <a class="text-primary-lighter" href="javascript:void(0)">{{ $user->email }}</a>
                         </h2>
@@ -32,11 +32,11 @@
                         </a>
                         @if($user->status == 1)
                         <a href="{{ route('admin.suspend', $user->id) }}" class="btn btn-sm  btn-outline-danger m-1">
-                            <i class="fa fa-times fa-dollar-sign opacity-50 me-1"></i> Suspend User
+                            <i class="fa fa-times  opacity-50 me-1"></i> Suspend User
                         </a>
                         @else
-                        <a href="{{ route('admin.unsuspend', $user->id) }}" class="btn btn-sm  btn-outline-success m-1">
-                            <i class="fa fa-times fa-dollar-sign opacity-50 me-1"></i> Unsuspend User
+                        <a href="{{ route('admin.verifyUser', $user->id) }}" class="btn btn-sm  btn-outline-success m-1">
+                            <i class="fa fa-check opacity-50 me-1"></i> Verify User
                         </a>
                         @endif
                         <form method="POST" action="{!! route('admin.deleteUser', $user->id) !!}" accept-charset="UTF-8">
@@ -85,7 +85,7 @@
                 </tr>
                 <tr>
                     <th>Name:</th>
-                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->fullname() }}</td>
                 </tr>
                 <tr>
                     <th>Email:</th>

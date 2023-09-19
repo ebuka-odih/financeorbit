@@ -24,14 +24,20 @@ class StakedController extends Controller
     {
         $data = new Staked();
         $data->staking_id = $request->staking_id;
-        $data->amount = 500;
+        $data->amount = $request->amount;
         $data->user_id = auth()->id();
         $data->save();
         $user = User::findOrFail($data->user_id);
         $user->balance -= $request->amount;
         $user->save();
-        return redirect()->back()->with('success', "Trader Copied Successfully");
+        return redirect()->route('user.staked.show', $data->id)->with('success', "Trader Copied Successfully");
 
+    }
+
+    public function show($id)
+    {
+        $staked = Staked::findOrFail($id);
+        return view('dashboard.staking.details', compact('staked'));
     }
 
 
