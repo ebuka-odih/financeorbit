@@ -22,7 +22,10 @@
                         </h2>
                         <h2 class="h4 fw-bold text-white-75">
                             Account Balance <a class="text-primary-lighter" href="javascript:void(0)">${{ $user->balance ? : "0.0" }}</a>
+                            <br>
+                            <span class="badge bg-success">{{ $user->trade_progress }}% </span>
                         </h2>
+
 
                         <a href="{{ route('admin.userDetails', $user->id) }}" class="btn btn-sm btn-secondary m-1">
                             <i class="fa fa-fw fa-user opacity-50 me-1"></i> Personal Details
@@ -79,6 +82,14 @@
                 <i class="si si-users me-1"></i> User Details
             </h2>
             <table class="table table-striped" style="width:100%">
+                <tr>
+                    <th>Trade Progress:</th>
+                    <td><span class="badge bg-success">{{ $user->trade_progress }}% </span>
+                    <span>
+                       <a class="btn btn-primary btn-sm fa fa-plus-circle" data-bs-toggle="modal" data-bs-target="#modal-block-normal"> Add</a>
+                   </span>
+                    </td>
+                </tr>
                 <tr>
                     <th>Date:</th>
                     <td>{{ date('d-M-Y', strtotime($user->created_at)) }}</td>
@@ -155,4 +166,41 @@
         </div>
         <!-- END Page Content -->
     </main>
+
+    <div class="modal" id="modal-block-normal" tabindex="-1" aria-labelledby="modal-block-normal" aria-hidden="true"  role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="block block-rounded block-themed block-transparent mb-0">
+                    <div class="block-header bg-primary-dark">
+                        <h3 class="block-title">Add Copy Trader</h3>
+                        <div class="block-options">
+                            <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa fa-fw fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <form action="{{ route('admin.tradeProg') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" value="{{ $user->id }}" name="user_id">
+
+                        <div class="block-content">
+                            <div class="row">
+                                <div class="mb-2 col-lg-12">
+                                    <label class="form-label" for="example-text-input">Percentage(%)</label>
+                                    <input type="text" class="form-control" id="example-text-input" name="trade_progress" value="{{ $user->trade_progress }}">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="block-content block-content-full text-end bg-body">
+                            <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 @endsection

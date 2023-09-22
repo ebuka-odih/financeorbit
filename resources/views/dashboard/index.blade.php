@@ -97,7 +97,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <small>{{ auth()->user()->trade_progress }}%</small>
                                         <div class="progress mt-20 mb-5">
+
                                             <div class="progress-bar" role="progressbar" style="width: {{ auth()->user()->trade_progress }}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
 
