@@ -31,7 +31,6 @@ class CreateUsersTable extends Migration
             $table->string('currency')->nullable();
             $table->string('gender')->nullable();
 
-
             $table->unsignedBigInteger('referrer_id')->nullable();
             $table->foreign('referrer_id')->references('id')->on('users');
             $table->bigInteger('referred_by')->nullable();

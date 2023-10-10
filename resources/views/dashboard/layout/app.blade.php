@@ -101,7 +101,6 @@
                     </div>
                     <div>
                         <a href="{{ route('user.wallets') }}" class="waves-effect waves-light btn-sm btn btn-outline btn-primary"><i class="fa fa-bar-chart"></i></a>
-
                     </div>
                 </div>
                 <div class="d-flex justify-content-between mt-2 mb-2">

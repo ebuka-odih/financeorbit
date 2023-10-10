@@ -46,6 +46,21 @@ class User extends Authenticatable implements MustVerifyEmail
         return $fullname;
     }
 
+    public function currency()
+    {
+        if ($this->currency == '$')
+        {
+            return "USD";
+        }elseif ($this->currency == '€')
+        {
+            return "EURO";
+        }elseif ($this->currency == 'R')
+        {
+            return "RAND";
+        }
+        return "REAIS";
+    }
+
 
 
     public function referrer()
