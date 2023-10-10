@@ -100,7 +100,7 @@
                         <h5 class="text-primary mb-0">@money(auth()->user()->balance) USD</h5>
                     </div>
                     <div>
-                        <a href="{{ route('user.wallets') }}" class="waves-effect waves-light btn-sm btn btn-outline btn-primary"><i class="fa fa-bar-chart"></i></a>
+                        <a href="{{ route('user.wallet') }}" class="waves-effect waves-light btn-sm btn btn-outline btn-primary"><i class="fa fa-bar-chart"></i></a>
                     </div>
                 </div>
                 <div class="d-flex justify-content-between mt-2 mb-2">
