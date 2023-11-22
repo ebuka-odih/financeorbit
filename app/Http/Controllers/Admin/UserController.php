@@ -56,4 +56,5 @@ class UserController extends Controller
         return redirect()->back()->with('unsuspend', "Account Has Been Unsuspended");
     }
 
+    
 }

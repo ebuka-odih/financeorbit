@@ -58,4 +58,5 @@ class TradeController extends Controller
         ];
         return $request->validate($rules);
     }
+    
 }

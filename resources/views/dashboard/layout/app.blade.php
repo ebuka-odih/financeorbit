@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -150,10 +151,10 @@
                                 <li><a href="{{ route('user.tradeHistory') }}"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Trade History</a></li>
                                 <li><a href="{{ route('user.copiedTrades') }}"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Copied Trades</a></li>
                                 <li><a href="{{ route('user.subscribeHistory') }}"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Subscribed</a></li>
-                                <li><a href="auth_register.html"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Staked </a></li>
-                                <li><a href="auth_register.html"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Scalped History </a></li>
+                                <li><a href="#"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Staked </a></li>
+                                <li><a href="#"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Scalped History </a></li>
                                 <li><a href="{{ route('user.miningHistory') }}"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> My Mining </a></li>
-                                <li><a href="auth_register.html"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Amazon </a></li>
+                                <li><a href="#"><i style="font-size: 10px" class="fa fa-ellipsis-h"><span class="path1"></span><span class="path2"></span></i> Amazon </a></li>
                             </ul>
                         </li>
 
@@ -201,17 +202,25 @@
                             </a>
                         </li>
                         <li>
-                            <a href="transactions-view.html">
+                            <a href="#">
                                 <i style="margin-right: 2px;" class="fa fa-paper-plane "></i>
                                 <span>Subscription</span>
                             </a>
                         </li>
                         <li>
-                            <a href="transactions-view.html">
+                            <a href="#">
                                 <i style="margin-right: 2px;" class="fa fa-book "></i>
                                 <span>Amazon KDP</span>
                             </a>
                         </li>
+                        @if(auth()->user()->status == 1)
+                        <li>
+                            <a href="{{ route('user.verify') }}">
+                                <i style="margin-right: 2px;" class="text-danger fa fa-check-circle "></i>
+                                <span>Verify</span>
+                            </a>
+                        </li>
+                        @endif
                     </ul>
 
                     <div class="sidebar-widgets">

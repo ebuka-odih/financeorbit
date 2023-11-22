@@ -87,7 +87,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], fu
 //    Route::resource('mining', "MiningAdminController");
 
     Route::get('buy', "UserController@buy")->name('buy');
-    Route::get('verify', "UserController@verify")->name('verify');
+    Route::get('profile/verify', "UserController@verify")->name('verify');
     Route::patch('verify', "UserController@processVerify")->name('processVerify');
 
     Route::get('mining/plans', 'InvestMiningController@plans')->name('mining.plans');

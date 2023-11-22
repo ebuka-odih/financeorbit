@@ -20,8 +20,6 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::post('add-wallet', "Admin\UserController@storeWallet")->name('storeWallet');
 
     Route::get('user/withdrawal/method/{id}', "Admin\UserController@userWithdrawMethod")->name('userWithdrawMethod');
-    Route::delete('delete/user/{id}', "Admin\UserController@deleteUser")->name('deleteUser');
-
 
     Route::get('deposits', "Admin\AdminDeposit@deposits")->name('deposit');
     Route::get('view/deposits/{id}', "Admin\AdminDeposit@view_deposit")->name('view_deposit');
