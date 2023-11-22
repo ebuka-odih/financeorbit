@@ -115,10 +115,18 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+
                                     </form>
+
                                     <div class="text-start mt-4 ms-0 mb-3">
-                                        <div class="mb-1"><a href="/account/forgot-password.php">Forgot password?</a></div>
+                                        <div class="mb-1">
+                                            @if (Route::has('password.request'))
+                                                <a  href="{{ route('password.request') }}">
+                                                    {{ __('Forgot Password?') }}
+                                                </a>
+                                            @endif
+
+                                        </div>
                                         <div>Don't have an account? <a href="{{ route('register') }}">Register Here</a></div>
                                     </div>
 
