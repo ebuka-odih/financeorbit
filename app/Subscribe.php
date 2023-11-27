@@ -36,6 +36,16 @@ class Subscribe extends Model
             return "<span class='badge badge-danger'>Cancelled</span>";
         }
     }
+    public function adminStatus()
+    {
+        if ($this->status == 1){
+            return "<span class='badge bg-warning'>Running</span>";
+        }elseif ($this->status > 1){
+            return "<span class='badge bg-success '>Ended</span>";
+        }else{
+            return "<span class='badge bg-danger'>Cancelled</span>";
+        }
+    }
 
 //    public function daily()
 //    {

@@ -62,7 +62,7 @@
                                     $@money($item->amount)
                                 </td>
                                 <td class="fw-semibold">
-                                    {!! $item->status() !!}
+                                    {!! $item->adminStatus() !!}
                                 </td>
                                 <td class="d-none d-sm-table-cell">
                                     $@money($item->profit)
