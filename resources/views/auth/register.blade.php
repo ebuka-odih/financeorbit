@@ -1,4 +1,9 @@
 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +71,7 @@
                         <div class="container-fluid">
                             <div class="row row-sm">
                                 <div class="card-body mt-2 mb-2">
-                                    <h2 class="text-start mb-2">Sign Up for Free</h2>
+                                    <h2 class="text-start mb-2">Sign Up</h2>
                                     <p class="mb-4 text-muted tx-13 ms-0 text-start">It's Free to Sign up and only takes a minute.</p>
 
                                     <center>	 </center>
@@ -88,7 +93,7 @@
                                             <label class="tx-medium">Firstname</label>
                                             <input class="form-control" placeholder="Enter your Name" type="text" name="firstname" required="">
                                         </div>
-                                            <div class="form-group text-start">
+                                        <div class="form-group text-start">
                                             <label class="tx-medium">Lastname</label>
                                             <input class="form-control" placeholder="Enter your Name" type="text" name="lastname" required="">
                                         </div>

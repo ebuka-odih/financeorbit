@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <title>Admin</title>
-    
+
 
     <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
     <meta name="author" content="pixelcave">
@@ -173,12 +173,12 @@
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
+                                <a class="nav-main-link" href="{{ route('admin.subscription.index') }}">
                                     <span class="nav-main-link-name">Invested Subscription</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.subscription.index') }}">
+                                <a class="nav-main-link" href="{{ route('admin.subscription.create') }}">
                                     <span class="nav-main-link-name">Add Subscription</span>
                                 </a>
                             </li>

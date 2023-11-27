@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Subscribe;
 use App\Subscription;
 use Illuminate\Http\Request;
 
@@ -10,8 +11,8 @@ class SubscriptionController extends Controller
 {
     public function index()
     {
-        $packages = Subscription::all();
-        return view('admin.sub.list', compact('packages'));
+        $subs = Subscribe::all();
+        return view('admin.sub.subscribed', compact('subs'));
     }
 
     public function create()

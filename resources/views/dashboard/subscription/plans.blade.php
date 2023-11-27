@@ -12,7 +12,7 @@
                             <nav>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{ route('user.dashboard') }}"><i class="mdi mdi-home-outline"></i></a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Futures Trading</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Subscription</li>
                                 </ol>
                             </nav>
                         </div>
@@ -38,20 +38,40 @@
                                         <div class="box no-shadow">
                                             <div class="box-body">
                                                 <div class="contact-page-aside">
-                                                    <ul class="list-style-none fs-16">
-                                                        <li>
-                                                            <img src="" alt="">
-                                                        </li>
-                                                        <li class="box-label">
-                                                            <span class="text-primary fs-4">Min: $@money($item->min_deposit)</span> - <span class="text-success fs-4">$UNLIMITED</span>
-                                                        </li>
-                                                        <li class="divider"></li>
-                                                        <li><a class="text-danger" href="javascript:void(0)">Work <span class="text-danger">103</span></a></li>
-                                                        <li><a class="text-warning" href="javascript:void(0)">Family <span class="text-warning">19</span></a></li>
-                                                        <li><a class="text-info" href="javascript:void(0)">Friends <span class="text-info">623</span></a></li>
-                                                        <li><a class="text-success" href="javascript:void(0)">Private <span class="text-success">53</span></a></li>
-                                                        <li class="box-label"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-success mt-10">+ Create New Label</a></li>
-                                                    </ul>
+                                                    <form action="{{ route('user.subscribe') }}" method="POST">
+                                                        @csrf
+                                                        <input type="hidden" name="subscription_id" value="{{ $item->id }}">
+                                                        <ul class="list-style-none fs-16">
+                                                            <li>
+                                                                <img src="" alt="">
+                                                            </li>
+                                                            <li class="box-label">
+                                                                <span class="text-primary fs-4">{{ $item->name }}</span>
+                                                                <span class="text-primary fs-4">Min: </span>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li class="mb-4"><a class="text-danger" href="javascript:void(0)">Amount: <span class="text-danger">Min: $@money($item->min_deposit)</span> <span class="text-success ">$UNLIMITED</span></a></li>
+                                                            <li><a class="text-warning" href="javascript:void(0)">Term: <span class="text-warning">{{ $item->term_days }} Day(s)</span></a></li>
+                                                            <li><a class="text-info" href="javascript:void(0)">ROI: <span class="text-info">{{ $item->roi }}%</span></a></li>
+                                                            <li>
+                                                               <input type="number" class="form-control mb-2" name="amount" placeholder="enter amount">
+                                                                @if(session()->has('declined'))
+                                                                    <div class="alert alert-danger">
+                                                                        {{ session()->get('declined') }}
+                                                                    </div>
+                                                                @endif
+                                                                @if(session()->has('insufficient'))
+                                                                    <div class="alert alert-danger">
+                                                                        {{ session()->get('insufficient') }}
+                                                                    </div>
+                                                                @endif
+                                                            </li>
+                                                            <li class="box-label">
+                                                                <button type="submit" class="btn btn-success mt-10">+ Subscribe</button>
+                                                          </li>
+                                                        </ul>
+                                                    </form>
+
                                                 </div>
                                             </div>
                                         </div>

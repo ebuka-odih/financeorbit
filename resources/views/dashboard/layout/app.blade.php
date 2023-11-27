@@ -202,7 +202,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="{{ route('user.sub.plans') }}">
                                 <i style="margin-right: 2px;" class="fa fa-paper-plane "></i>
                                 <span>Subscription</span>
                             </a>
