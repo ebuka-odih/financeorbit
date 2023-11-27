@@ -33,7 +33,7 @@
                         <a href="{{ route('admin.fund') }}" class="btn btn-sm btn-info m-1">
                             <i class="fa fa-fw fa-dollar-sign opacity-50 me-1"></i> Fund Account
                         </a>
-                        @if($user->status == 1)
+                        @if($user->status > 1)
                         <a href="{{ route('admin.suspend', $user->id) }}" class="btn btn-sm  btn-outline-danger m-1">
                             <i class="fa fa-times  opacity-50 me-1"></i> Suspend User
                         </a>

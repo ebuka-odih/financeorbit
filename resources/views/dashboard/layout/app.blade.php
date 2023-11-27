@@ -207,12 +207,6 @@
                                 <span>Subscription</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i style="margin-right: 2px;" class="fa fa-book "></i>
-                                <span>Amazon KDP</span>
-                            </a>
-                        </li>
                         @if(auth()->user()->status == 1)
                         <li>
                             <a href="{{ route('user.verify') }}">
