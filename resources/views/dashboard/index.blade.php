@@ -1,5 +1,4 @@
-
-    @extends('dashboard.layout.app')
+ @extends('dashboard.layout.app')
     @section('content')
 
         <div class="content-wrapper">
@@ -617,7 +616,7 @@
                                                 <td>{{ $item->execution_time }}</td>
                                                 <td>{{ $item->sl }}</td>
                                                 <td>{{ $item->tp }}</td>
-                                                <td>{{ $item->profit ? : "$ 0.00" }}</td>
+                                                <td>$@money($item->profit)</td>
                                                 <td>{!! $item->status() !!}</td>
                                             </tr>
                                         @endforeach

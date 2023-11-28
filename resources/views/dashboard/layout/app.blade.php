@@ -273,19 +273,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- Vendor JS -->
 
-
-<script src="https://www.amcharts.com/lib/4/core.js"></script>
-
-<!-- Master Admin App -->
-<script src="https://master-admin-template.multipurposethemes.com/bs5/crypto-dark-rtl/js/template.js"></script>
-<script src="https://master-admin-template.multipurposethemes.com/bs5/crypto-dark-rtl/js/pages/dashboard.js"></script>
-
 <script src="{{ asset('client/js/vendors.min.js') }}"></script>
 <script src="https://master-admin-template.multipurposethemes.com/bs5/assets/icons/feather-icons/feather.min.js"></script>
 
 <!-- Master Admin App -->
 <script src="{{ asset('client/js/template.js')}}"></script>
-<script src="js/pages/dashboard.js"></script>
+<script src="{{ asset('client/js/pages/dashboard.js') }}"></script>
 
 </body>
 

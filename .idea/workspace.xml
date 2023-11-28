@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/index2.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/client/js/vendors.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/client/js/vendors.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php" afterDir="false" />
     </list>
@@ -217,7 +214,7 @@
       <workItem from="1700695511773" duration="1188000" />
       <workItem from="1700697281224" duration="675000" />
       <workItem from="1701098100338" duration="4757000" />
-      <workItem from="1701199849566" duration="4093000" />
+      <workItem from="1701199849566" duration="4609000" />
     </task>
     <servers />
   </component>
