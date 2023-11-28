@@ -78,7 +78,7 @@
                                                     <td>
                                                         <div class="row">
                                                             <div class="col-lg-6">
-                                                                <a type="button" class="btn btn-sm btn-primary push" data-bs-toggle="modal" data-bs-target="#modal-block-popin{{ $item->id }}">Action</a>
+                                                                <a href="{{ route('admin.viewTrade', $item->id) }}" class="btn btn-sm btn-primary push" ><i class="fa fa-eye"></i></a>
                                                             </div>
                                                         </div>
 

@@ -40,6 +40,12 @@ class AdminTradesController extends Controller
         return redirect()->back()->with('updated', "Trade Order Updated Successfully");
     }
 
+    public function viewTrade($id)
+    {
+        $trade = Trade::findOrFail($id);
+        return view('admin.trade.view', compact('trade'));
+    }
+
 //    public function closeTrade(Request $request, $id){
 //        $trade = Trade::findOrFail($id);
 //        $trade->status = 1;

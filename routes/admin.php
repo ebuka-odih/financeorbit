@@ -55,6 +55,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::get('close/trades/history', "Admin\AdminTradesController@closeTrades")->name('trades.close');
     Route::post('set/trade/{id}', "Admin\AdminTradesController@setTrade")->name('setTrade');
     Route::get('close/trade/{id}', "Admin\AdminTradesController@closeTrade")->name('closeTrade');
+    Route::get('view/trade/{id}', "Admin\AdminTradesController@viewTrade")->name('viewTrade');
 
     Route::get('suspend/trade/{id}', "Admin\UserController@suspend")->name('suspend');
     Route::get('unsuspend/user/{id}', "Admin\UserController@verifyUser")->name('verifyUser');
