@@ -254,7 +254,21 @@
 
 
 <!-- Page Content overlay -->
+<script>
+    function toggleBeneficiaryFields() {
+        const pairType = document.getElementById('pairType').value;
+        const beneficiaryField1 = document.getElementById('beneficiaryField1');
+        const beneficiaryField2 = document.getElementById('beneficiaryField2');
 
+        if (pairType === 'crypto') {
+            beneficiaryField1.style.display = 'block';
+            beneficiaryField2.style.display = 'none';
+        } else if (pairType === 'forex') {
+            beneficiaryField1.style.display = 'none';
+            beneficiaryField2.style.display = 'block';
+        }
+    }
+</script>
 
 <!-- Vendor JS -->
 <script src="{{ asset('client/js/vendors.min.js') }}"></script>

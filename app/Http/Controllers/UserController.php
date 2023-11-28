@@ -18,7 +18,7 @@ class UserController extends Controller
     public function dashboard()
     {
         $user = Auth::user();
-        $trades = Trade::whereUserId(\auth()->id())->where('status', 0)->latest()->paginate(20);
+        $trades = Trade::whereUserId(\auth()->id())->where('status', 0)->latest()->paginate(4);
         $withdrawal = Withdraw::whereUserId(\auth()->id())->where('status', 1)->sum('amount');
         $deposits = Deposit::whereUserId(\auth()->id())->where('status', 1)->sum('amount');
         $bonus = Funding::whereUserId(\auth()->id())->select('type', 'Bonus')->where('status', 1)->sum('amount');
