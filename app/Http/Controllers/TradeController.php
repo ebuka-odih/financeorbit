@@ -48,7 +48,7 @@ class TradeController extends Controller
     {
         $rules = [
           'type' => 'required',
-          'trade_action' => 'nullable',
+          'trade_action' => 'required',
           'symbol' => 'required',
           'amount' => 'required',
           'sl' => 'nullable',
