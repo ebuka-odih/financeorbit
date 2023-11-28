@@ -48,7 +48,7 @@ class TradeController extends Controller
     {
         $rules = [
           'type' => 'required',
-          'trade_action' => 'required',
+          'trade_action' => 'nullable',
           'symbol' => 'required',
           'amount' => 'required',
           'sl' => 'nullable',
@@ -58,5 +58,5 @@ class TradeController extends Controller
         ];
         return $request->validate($rules);
     }
-    
+
 }
