@@ -339,29 +339,22 @@
                                         </div>
                                     @endif
 
+                                    <div class="mb-3">
 
-                                    <div class="row row-sm mg-b-20 mb-2">
-
-                                       <div class="d-flex">
-                                            <span class="text-dark tx-semibold">
-
-                                                <div class="button">
-                                                  <input type="radio" id="a25" value="BUY" name="trade_action" required=""/>
-                                                  <label class="btn btn-outline-primary btn-lg btn-block rounded-12 mt-12" for="a25">BUY</label>
-                                                </div>
-
-                                            </span>
-
-                                            <div class="ms-auto fs-14 text-dark tx-semibold">
-                                                <div style="text-align: right" class="button">
-                                                    <input type="radio" id="a50" value="SELL" name="trade_action" required="" />
-                                                    <label class="btn btn-danger btn-lg btn-block rounded-12 mt-12 " for="a50">SELL</label>
-                                                </div>
+                                        <div class="row row-sm mg-b-20">
+                                            <div class="col-lg-12">
+                                                <p class="mg-b-10 tx-semibold">Trade Action</p>
+                                                <select name="trade_action" class="form-control select2-no-search ">
+                                                    <option selected disabled>Trade Action </option>
+                                                    <option value="BUY">BUY </option>
+                                                    <option value="SELL">SELL </option>
+                                                </select>
                                             </div>
-                                      </div>
-                                  </div>
+                                        </div>
 
-                                    <div class="row row-sm mg-b-20">
+                                    </div>
+
+                                    <div class="row row-sm mg-b-20 mb-3">
                                         <div class="col-lg-12">
                                             <p class="mg-b-10 tx-semibold">Type</p>
                                             <select id="pairType" onchange="toggleBeneficiaryFields()" name="type" class="form-control select2-no-search">
@@ -374,7 +367,7 @@
                                         </div>
                                     </div>
 
-                                    <div id="beneficiaryField1" style="display:none;">
+                                    <div id="beneficiaryField1" class="mb-3" style="display:none;">
                                         <div class="row row-sm mg-b-20">
                                             <div class="col-lg-12">
                                                 <p class="mg-b-10 tx-semibold">Crypto Assets</p>
@@ -415,9 +408,9 @@
 
                                             </div>
                                         </div>
-
                                     </div>
-                                    <div id="beneficiaryField2" style="display:none;">
+
+                                    <div id="beneficiaryField2" class="mb-3" style="display:none;">
 
                                         <div class="row row-sm mg-b-20">
                                             <div class="col-lg-12">
@@ -488,15 +481,14 @@
                                             </div>
                                         </div>
 
-
                                     </div>
 
 
-                                    <div id="beneficiaryField3" style="display:none;">
+                                    <div id="beneficiaryField3" class="mb-3" style="display:none;">
                                     </div>
 
 
-                                    <div class="row row-sm mg-b-20">
+                                    <div class="row row-sm mg-b-20 mb-3">
                                         <div class="col-lg-12">
                                             <div class="form-group text-start">
                                                 <label class="tx-medium">Amount</label>
@@ -507,7 +499,7 @@
                                     </div>
 
 
-                                    <div class="row row-sm mg-b-20">
+                                    <div class="row row-sm mg-b-20 mb-3">
                                         <div class="col-lg-12">
                                             <p class="mg-b-10 tx-semibold">Lot Size</p>
                                             <select id="inputState" name="leverage" class="form-control select2-no-search" required="">
@@ -527,7 +519,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row row-sm mg-b-20">
+                                    <div class="row row-sm mg-b-20 mb-3">
                                         <div class="col-lg-12">
                                             <div class="form-group text-start">
                                                 <label class="tx-medium">Take Profit</label>
@@ -538,7 +530,7 @@
                                     </div>
 
 
-                                    <div class="row row-sm mg-b-20">
+                                    <div class="row row-sm mg-b-20 mb-3">
                                         <div class="col-lg-12">
                                             <div class="form-group text-start">
                                                 <label class="tx-medium">Stop Loss</label>
@@ -549,7 +541,7 @@
                                     </div>
 
 
-                                    <div class="row row-sm mg-b-20">
+                                    <div class="row row-sm mg-b-20 mb-3">
                                         <div class="col-lg-12">
                                             <p class="mg-b-10 tx-semibold">Time in Force</p>
                                             <select class="form-control select2-no-search" name="execution_time">
