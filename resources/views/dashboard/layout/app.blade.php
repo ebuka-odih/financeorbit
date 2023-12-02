@@ -21,8 +21,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css" integrity="sha512-LX0YV/MWBEn2dwXCYgQHrpa9HJkwB+S+bnBpifSOTO1No27TqNMKYoAn6ff2FBh03THAzAiiCwQ+aPX+/Qt/Ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="d3f0b1a5-c917-4245-8ce5-41e2ba1f64f7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-
 </head>
 
 <body class="hold-transition dark-skin theme-primary fixed">
@@ -279,6 +277,8 @@
 <!-- Master Admin App -->
 <script src="{{ asset('client/js/template.js')}}"></script>
 <script src="{{ asset('client/js/pages/dashboard.js') }}"></script>
+
+<script src="//code.tidio.co/xnir84l1ajqwnulickksrjcbt8eunur9.js" async></script>
 
 </body>
 
