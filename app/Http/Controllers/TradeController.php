@@ -31,8 +31,20 @@ class TradeController extends Controller
     public function placeTrade(Request $request)
     {
         if ($request->amount < auth()->user()->balance){
+            if ($request->type == 'crypto'){
+                $data = $this->getData($request);
+                $data['status'] = 0;
+                $data['symbol2'] = $request->symbol2;
+                $data['user_id'] = Auth::id();
+                $trade = Trade::create($data);
+                $user = User::findOrFail($trade->user_id);
+                $user->balance -= $trade->amount;
+                $user->save();
+                return redirect()->back()->with('success', "Your Order Has Been Created");
+            }
             $data = $this->getData($request);
             $data['status'] = 0;
+            $data['symbol'] = $request->symbol;
             $data['user_id'] = Auth::id();
             $trade = Trade::create($data);
             $user = User::findOrFail($trade->user_id);

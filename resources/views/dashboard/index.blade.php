@@ -371,7 +371,7 @@
                                         <div class="row row-sm mg-b-20">
                                             <div class="col-lg-12">
                                                 <p class="mg-b-10 tx-semibold">Crypto Assets</p>
-                                                <select name="symbol" class="form-control select2-no-search" >
+                                                <select name="symbol2" class="form-control select2-no-search" >
 
                                                     <option value="ETH/USD">ETH/USD</option>
                                                     <option value="BTC/USD">BTC/USD </option>
@@ -401,7 +401,6 @@
                                                     <option value="BTC/XLM">BTC/XLM </option>
                                                     <option value="DAI/wETH">DAI/wETH </option>
                                                 </select>
-
                                             </div>
                                             <div class="d-flex">
                                                 <span class="text-dark tx-semibold">Balance ~ <font color="teal">{{ auth()->user()->currency }} @money(auth()->user()->balance)</font></span>
@@ -587,6 +586,7 @@
                                     <table class="table table-hover">
                                         <thead>
                                         <tr>
+                                            <th>Date</th>
                                             <th>Type</th>
                                             <th>Pair</th>
                                             <th>Action</th>
@@ -601,9 +601,16 @@
                                         @foreach($trades as $item)
                                             <tr>
                                                 <td>{{ $item->created_at }}</td>
-                                                <td>{{ $item->symbol }}</td>
+                                                <td>{{ $item->type }}</td>
+                                                <td>
+                                                    @if($item->type == 'crypto')
+                                                        {{ $item->symbol2 }}
+                                                    @else
+                                                        {{ $item->symbol }}
+                                                    @endif
+                                                </td>
                                                 <td>{{ $item->trade_action }}</td>
-                                                <td>{{ $item->execution_time }}</td>
+                                                <td>{{ $item->execution_time }}/Mins</td>
                                                 <td>{{ $item->sl }}</td>
                                                 <td>{{ $item->tp }}</td>
                                                 <td>$@money($item->profit)</td>
