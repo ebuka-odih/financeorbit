@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TradeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TradeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Funding.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Funding.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FundingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FundingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/user/wallet-overview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/user/wallet-overview.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +221,8 @@
       <workItem from="1701289765557" duration="597000" />
       <workItem from="1701561448957" duration="723000" />
       <workItem from="1701645910815" duration="217000" />
-      <workItem from="1701790449197" duration="1109000" />
+      <workItem from="1701790449197" duration="2019000" />
+      <workItem from="1701983671257" duration="1843000" />
     </task>
     <servers />
   </component>

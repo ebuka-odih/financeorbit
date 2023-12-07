@@ -23,7 +23,7 @@ class Funding extends Model
             return "Balance";
         }
         elseif ($this->type == "Profit"){
-            return "Balance";
+            return "Profit";
         }
         elseif ($this->type == "Bonus"){
             return "Bonus";
@@ -42,14 +42,5 @@ class Funding extends Model
         }
     }
 
-    public function showBTCRate()
-    {
-        $btc =  Currency::convert()
-            ->from('USD')
-            ->to('BTC')
-            ->source('crypto')
-            ->round(7)
-            ->get();
-        return $btc * $this->amount;
-    }
+
 }

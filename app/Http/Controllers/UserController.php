@@ -26,6 +26,7 @@ class UserController extends Controller
         $investment = Subscribe::whereUserId(\auth()->id())->where('status', 1)->sum('amount');
         return view('dashboard.index', compact('deposits', 'trades', 'withdrawal','bonus', 'bonus2', 'user', 'investment'));
     }
+
     public function wallet()
     {
         $user = Auth::user();

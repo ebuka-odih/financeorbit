@@ -148,7 +148,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-20 mb-5">
-                                    <h3 class="my-0 fw-600"><span class="text-primary">@money($bonus + $bonus2)</span> USD</h3>
+                                    <h3 class="my-0 fw-600"><span class="text-primary">@money($user->ref_bonus)</span> USD</h3>
                                 </div>
                             </div>
                             <div class="box-footer">
