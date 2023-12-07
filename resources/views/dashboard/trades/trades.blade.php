@@ -238,7 +238,6 @@
                                     @endif
 
 
-
                                     <div class="row row-sm mg-b-20">
                                         <div class="col-lg-12">
                                             <p class="mg-b-10 tx-semibold">Type</p>
@@ -450,24 +449,16 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="row row-sm mg-b-20">
-                                        <div class="d-flex">
-                                        <span class="text-dark tx-semibold">
 
-                                            <div class="button">
-                                              <input type="radio" id="a25" value="BUY" name="type" required=""/>
-                                              <label class="btn btn-secondary btn-lg btn-block rounded-12 mt-12" for="a25">BUY</label>
-                                            </div>
-
-                                        </span>
-
-                                            <div class="ms-auto fs-14 text-dark tx-semibold">
-
-                                                <div style="text-align: right; " class="button ">
-                                                    <input type="radio" id="a50" value="SELL" name="type" required="" />
-                                                    <label class="btn btn-danger btn-lg btn-block rounded-12 mt-12 mb-5" for="a50">SELL</label><br>
-                                                </div>
-
+                                    <div class="mb-3">
+                                        <div class="row row-sm mg-b-20">
+                                            <div class="col-lg-12">
+                                                <p class="mg-b-10 tx-semibold">Trade Action</p>
+                                                <select name="trade_action" class="form-control select2-no-search ">
+                                                    <option selected disabled>Trade Action </option>
+                                                    <option value="BUY">BUY </option>
+                                                    <option value="SELL">SELL </option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -500,6 +491,7 @@
                                         <table class="table table-hover">
                                             <thead>
                                             <tr>
+                                                <th>Date</th>
                                                 <th>Type</th>
                                                 <th>Pair</th>
                                                 <th>Action</th>
@@ -514,12 +506,19 @@
                                             @foreach($trades as $item)
                                                 <tr>
                                                     <td>{{ $item->created_at }}</td>
-                                                    <td>{{ $item->symbol }}</td>
+                                                    <td>{{ $item->type }}</td>
+                                                    <td>
+                                                        @if($item->type == 'crypto')
+                                                            {{ $item->symbol2 }}
+                                                        @else
+                                                            {{ $item->symbol }}
+                                                        @endif
+                                                    </td>
                                                     <td>{{ $item->trade_action }}</td>
-                                                    <td>{{ $item->execution_time }}</td>
+                                                    <td>{{ $item->execution_time }}/Mins</td>
                                                     <td>{{ $item->sl }}</td>
                                                     <td>{{ $item->tp }}</td>
-                                                    <td>{{ $item->profit ? : "$ 0.00" }}</td>
+                                                    <td>$@money($item->profit)</td>
                                                     <td>{!! $item->status() !!}</td>
                                                 </tr>
                                             @endforeach

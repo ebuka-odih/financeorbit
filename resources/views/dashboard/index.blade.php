@@ -340,7 +340,6 @@
                                     @endif
 
                                     <div class="mb-3">
-
                                         <div class="row row-sm mg-b-20">
                                             <div class="col-lg-12">
                                                 <p class="mg-b-10 tx-semibold">Trade Action</p>
@@ -351,7 +350,6 @@
                                                 </select>
                                             </div>
                                         </div>
-
                                     </div>
 
                                     <div class="row row-sm mg-b-20 mb-3">
