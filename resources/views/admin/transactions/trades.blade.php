@@ -62,8 +62,14 @@
                                             @foreach($trades as $item)
                                                 <tr>
                                                     <td>{{ date('d M, Y', strtotime($item->created_at)) }}</td>
-                                                    <td>{{ $item->user->name }}</td>
-                                                    <td>{{ $item->symbol }}</td>
+                                                    <td>{{ optional($item->user)->name }}</td>
+                                                    <td>
+                                                        @if($item->type == 'crypto')
+                                                            {{ $item->symbol2 }}
+                                                        @else
+                                                            {{ $item->symbol }}
+                                                        @endif
+                                                    </td>
                                                     <td>$@money($item->amount)</td>
                                                     <td>{{ $item->leverage }}</td>
                                                     <td>{{ $item->execution_time }} Secs</td>
