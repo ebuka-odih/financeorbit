@@ -15,7 +15,7 @@ class FundingController extends Controller
 {
     public function fund()
     {
-        $users = User::where('admin', 1)->get();
+        $users = User::where('admin', 0)->get();
         $funds = Funding::all();
         return view('admin.user.add-fund', compact('users', 'funds'));
     }
