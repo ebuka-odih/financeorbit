@@ -287,24 +287,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-main-item">
-                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                            <i class="nav-main-link-icon fa fa-book"></i>
-                            <span class="nav-main-link-name">Amazon</span>
-                        </a>
-                        <ul class="nav-main-submenu">
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.trades.open') }}">
-                                    <span class="nav-main-link-name">Purchased Books</span>
-                                </a>
-                            </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.amazon.create') }}">
-                                    <span class="nav-main-link-name">Add Books</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
 
                     <li class="nav-main-heading">Others</li>
                     <li class="nav-main-item">

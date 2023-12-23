@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="790db171-8dfb-4ba3-9fe2-cc7a1ea19055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminMessage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminMessageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminMessageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/message/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/message/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,6 +225,8 @@
       <workItem from="1701983671257" duration="2921000" />
       <workItem from="1702039252043" duration="626000" />
       <workItem from="1702148720341" duration="598000" />
+      <workItem from="1702972528196" duration="654000" />
+      <workItem from="1703362393940" duration="2142000" />
     </task>
     <servers />
   </component>
@@ -250,6 +256,11 @@
           <url>file://$PROJECT_DIR$/resources/views/dashboard/layout/app.blade.php</url>
           <line>11</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/emails/send_mail_message.blade.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

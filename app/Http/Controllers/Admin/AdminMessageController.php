@@ -3,30 +3,35 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SendMailMessage;
 use App\Message;
+use App\SendMail;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class AdminMessageController extends Controller
 {
     public function messages()
     {
-        $messages = Message::all();
-        $users = User::where('admin', 0)->get();
+        $messages = SendMail::all();
+        $users = User::where('admin', 1)->get();
         return view('admin.message.create', compact('messages', 'users'));
     }
 
     public function sendMessage(Request $request)
     {
-        $message = new Message();
+        $message = new SendMail();
         $message->user_id = $request->user_id;
-        $message->message = $request->message;
+        $message->client_email = $request->client_email;
+        $message->subject = $request->subject;
+        $message->body = $request->body;
         $message->save();
+        Mail::to($message->client_email)->send(new SendMailMessage($message));
         return redirect()->back()->with('success', "Message Sent Successfully");
-
     }
-    
+
 
     public function editMessage($id)
     {

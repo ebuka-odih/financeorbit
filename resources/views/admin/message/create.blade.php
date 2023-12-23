@@ -47,19 +47,25 @@
                         <div class="row push">
                             <div class="col-lg-6 col-xl-12">
                                 <div class="mb-4">
-                                    <label class="form-label" for="example-text-input">Select User</label>
-                                    <select name="user_id" id="" class="form-control">
+                                    <label class="form-label" for="example-text-input">Select Email</label>
+                                    <select name="client_email" id="" class="form-control">
                                         @foreach($users as $item)
-                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                            <option value="{{ $item->id }}">{{ $item->email }}</option>
                                         @endforeach
                                     </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-12">
+                                <div class="mb-4">
+                                    <label class="form-label" for="example-text-input">Mail Subject</label>
+                                    <input type="text" class="form-control" name="subject">
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-xl-12">
                                 <div class="mb-4">
-                                    <label class="form-label" for="example-email-input">Amount</label>
-                                    <textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
+                                    <label class="form-label" for="example-email-input">Message</label>
+                                    <textarea name="body" id="" cols="30" rows="10" class="form-control"></textarea>
                                 </div>
                             </div>
 
