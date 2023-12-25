@@ -82,64 +82,7 @@
 
         <!-- END Page Content -->
 
-        <div class="content">
 
-            <!-- Striped Table -->
-            <div class="block block-rounded">
-                <div class="block-content">
-                    <table class="table table-striped table-vcenter">
-                        <thead>
-                        <tr>
-                            <th class="text-center" style="width: 50px;">#</th>
-                            <th>Date</th>
-                            <th>User </th>
-                            <th>Message </th>
-                            <th class="text-center" style="width: 100px;">Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($messages as $index => $item)
-                            <tr>
-                                <th class="text-center" scope="row">{{ $index + 1 }}</th>
-                                <td class="fw-semibold">
-                                    {{ date('d M, Y', strtotime( $item->created_at)) }}
-                                </td>
-                                <td class="fw-semibold">
-                                    {{ $item->user->name }}
-                                </td>
-                                <td class="fw-semibold">
-                                    {{ $item->message }}
-                                </td>
-                                <td class="text-center">
-                                    <div class="btn-group">
-                                        <a href="{{ route('admin.editMessage', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit">
-                                            <i class="fa fa-pencil-alt"></i>
-                                        </a>
-
-                                        <form method="POST" action="{!! route('admin.subscription.destroy', $item->id) !!}" accept-charset="UTF-8">
-                                            <input name="_method" value="DELETE" type="hidden">
-                                            {{ csrf_field() }}
-
-                                            <div class="btn-group btn-group-xs pull-right" role="group">
-                                                <button type="submit" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="" data-bs-original-title="Delete" onclick="return confirm(&quot;Delete subscription?&quot;)">
-                                                    <i class="fa fa-times"></i>
-                                                </button>
-
-                                            </div>
-
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- END Striped Table -->
-
-        </div>
     </main>
 
 @endsection
