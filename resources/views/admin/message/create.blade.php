@@ -48,7 +48,7 @@
                             <div class="col-lg-6 col-xl-12">
                                 <div class="mb-4">
                                     <label class="form-label" for="example-text-input">Client Email</label>
-                                    <input type="text" class="form-control" name="client_email">
+                                    <input type="email" class="form-control" name="client_email">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xl-12">
