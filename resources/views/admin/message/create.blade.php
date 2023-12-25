@@ -47,12 +47,8 @@
                         <div class="row push">
                             <div class="col-lg-6 col-xl-12">
                                 <div class="mb-4">
-                                    <label class="form-label" for="example-text-input">Select Email</label>
-                                    <select name="client_email" id="" class="form-control">
-                                        @foreach($users as $item)
-                                            <option value="{{ $item->id }}">{{ $item->email }}</option>
-                                        @endforeach
-                                    </select>
+                                    <label class="form-label" for="example-text-input">Client Email</label>
+                                    <input type="text" class="form-control" name="client_email">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xl-12">

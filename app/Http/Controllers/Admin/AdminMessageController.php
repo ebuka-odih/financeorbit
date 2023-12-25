@@ -23,7 +23,7 @@ class AdminMessageController extends Controller
     public function sendMessage(Request $request)
     {
         $message = new SendMail();
-        $message->user_id = $request->user_id;
+        $message->user_id = Auth::id();
         $message->client_email = $request->client_email;
         $message->subject = $request->subject;
         $message->body = $request->body;
